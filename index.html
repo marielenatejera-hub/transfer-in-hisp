@@ -27,20 +27,19 @@
     color: var(--text);
     font-family: 'IBM Plex Sans', sans-serif;
     min-height: 100vh;
-    padding: 48px 32px;
+    padding: 48px 24px;
   }
 
   /* HEADER */
   .header {
     max-width: 1200px;
-    margin: 0 auto 48px;
+    margin: 0 auto 32px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 24px;
     flex-wrap: wrap;
   }
-  .header-left {}
   .eyebrow {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
@@ -83,6 +82,42 @@
   .badge.no { background: rgba(239,68,68,0.12); color: var(--accent4); }
   .badge.review { background: rgba(245,158,11,0.12); color: var(--accent3); border: 1px solid rgba(245,158,11,0.3); }
 
+  /* TABS */
+  .tabs-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 32px;
+  }
+  .tabs-nav {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+  }
+  .tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    color: var(--muted);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+    position: relative;
+    bottom: -1px;
+  }
+  .tab-btn:hover { color: var(--text); background: var(--surface); }
+  .tab-btn.active {
+    color: var(--accent);
+    background: var(--surface);
+    border-color: var(--border);
+    border-bottom-color: var(--surface);
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
   /* GRID */
   .grid {
     max-width: 1200px;
@@ -101,10 +136,7 @@
     transition: border-color 0.2s, transform 0.2s;
     animation: fadeUp 0.5s ease both;
   }
-  .card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -124,29 +156,10 @@
     justify-content: space-between;
     gap: 12px;
   }
-  .card-title-group {}
-  .card-product {
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: -0.01em;
-  }
-  .card-site {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 2px;
-  }
-  .card-tags {
-    display: flex;
-    gap: 6px;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
+  .card-product { font-size: 20px; font-weight: 600; color: #fff; letter-spacing: -0.01em; }
+  .card-site { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .card-tags { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; }
   .card-body { padding: 20px; }
-
   .section { margin-bottom: 20px; }
   .section:last-child { margin-bottom: 0; }
   .section-label {
@@ -157,30 +170,13 @@
     color: var(--muted);
     margin-bottom: 8px;
   }
-  .section-text {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #94a3b8;
-  }
-
-  /* RECHAZO PILL */
-  .rechazo-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
+  .section-text { font-size: 13px; line-height: 1.6; color: #94a3b8; }
+  .rechazo-row { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
   .rechazo-label { font-size: 12px; color: var(--muted); }
-  .pill {
-    display: inline-flex; align-items: center; gap: 5px;
-    padding: 3px 10px; border-radius: 20px;
-    font-size: 12px; font-weight: 500;
-  }
+  .pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; }
   .pill.yes { background: rgba(0,229,160,0.1); color: var(--accent); border: 1px solid rgba(0,229,160,0.25); }
   .pill.no  { background: rgba(239,68,68,0.1); color: var(--accent4); border: 1px solid rgba(239,68,68,0.25); }
   .pill.rev { background: rgba(245,158,11,0.1); color: var(--accent3); border: 1px solid rgba(245,158,11,0.25); }
-
-  /* LINKS */
   .links { display: flex; flex-direction: column; gap: 6px; }
   .link-item {
     display: flex; align-items: center; gap: 8px;
@@ -196,38 +192,137 @@
   .link-item:hover { border-color: var(--accent2); background: rgba(59,130,246,0.06); color: var(--accent2); }
   .link-icon { font-size: 14px; flex-shrink: 0; }
   .link-text { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
-  /* TABLES block */
   .tables-block { display: flex; flex-direction: column; gap: 6px; }
-  .table-item {
-    padding: 8px 10px;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
+  .table-item { padding: 8px 10px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; }
+  .table-name { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--accent); word-break: break-all; line-height: 1.4; }
+  .table-desc { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .note { padding: 10px 12px; border-radius: 6px; font-size: 12px; line-height: 1.5; margin-top: 12px; }
+  .note.warn { background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2); color: #d9a54a; }
+  .note.info { background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.2); color: #7ba7d4; }
+
+  /* COMPARISON TABLE */
+  .comparativa-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    animation: fadeUp 0.4s ease both;
   }
-  .table-name {
+  .comparativa-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    table-layout: fixed;
+  }
+  .comparativa-table th,
+  .comparativa-table td {
+    padding: 9px 10px;
+    border: 1px solid var(--border);
+    text-align: center;
+    vertical-align: middle;
+  }
+  .comparativa-table th {
+    background: var(--surface2);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    white-space: nowrap;
+    width: 11%;
+  }
+  .comparativa-table th.col-label {
+    text-align: left;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    width: 22%;
+  }
+  .comparativa-table td {
+    color: #94a3b8;
+    background: var(--surface);
+  }
+  .comparativa-table td.row-label {
+    text-align: left;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 13px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .comparativa-table tr.group-header td {
+    background: var(--surface2);
+    color: var(--accent);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 8px 14px;
+    border-color: var(--border);
+  }
+  .comparativa-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .comparativa-table tr.group-header:hover td { background: var(--surface2); }
+  /* PAIN CELLS */
+  .pain-cell {
+    background: rgba(167,139,250,0.08) !important;
+    border-color: rgba(167,139,250,0.25) !important;
+  }
+  .pain-label {
+    color: #a78bfa !important;
+    font-weight: 600 !important;
+  }
+  .pain-cell a {
+    color: #a78bfa;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .pain-cell a:hover { text-decoration: underline; }
+  .wip-badge {
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 4px;
+    vertical-align: middle;
+    opacity: 0.85;
+  }
+
+  .row-sublabel {
+    padding-left: 28px !important;
+    color: var(--muted) !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    font-style: italic;
+  }
+  .comparativa-table tr.subrow td {
+    background: rgba(0,0,0,0.15);
+    border-top: none;
+  }
+
+  .chip { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+  .chip.si   { color: var(--accent); }
+  .chip.no   { color: var(--accent4); }
+  .chip.dash { color: var(--muted); font-size: 13px; }
+  .chip.cautelar { background: rgba(245,158,11,0.12); color: var(--accent3); border: 1px solid rgba(245,158,11,0.25); font-size: 10px; font-weight: 600; }
+  .chip.rechazo  { background: rgba(239,68,68,0.12); color: var(--accent4); border: 1px solid rgba(239,68,68,0.25); font-size: 10px; font-weight: 600; }
+
+  .mono-small {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: var(--accent);
-    word-break: break-all;
-    line-height: 1.4;
-  }
-  .table-desc {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 3px;
+    background: var(--surface2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 1.5;
   }
 
-  /* WARNING note */
-  .note {
-    padding: 10px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    line-height: 1.5;
-    margin-top: 12px;
+  .flow-text {
+    font-size: 11px;
+    color: #94a3b8;
+    white-space: nowrap;
   }
-  .note.warn { background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2); color: #d9a54a; }
-  .note.info { background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.2); color: #7ba7d4; }
+  .flow-text .arr { color: var(--muted); margin: 0 2px; }
 
   /* FOOTER */
   .footer {
@@ -253,332 +348,613 @@
     <h1>Transfer-In <span>HISP</span></h1>
     <p class="subtitle">Repositorio de productos · Resúmenes, flujos y links de utilidad</p>
   </div>
-  <div class="legend">
-    <span class="legend-item"><span class="badge mf">MF</span> Money Flow</span>
-    <span class="legend-item"><span class="badge pi">PI</span> Payment Intent</span>
-    <span class="legend-item"><span class="badge ok">✓</span> Rechazo habilitado</span>
-    <span class="legend-item"><span class="badge warn">⚠</span> En revisión</span>
-    <span class="legend-item"><span class="badge no">✗</span> Solo bloqueo cautelar</span>
+</div>
+
+<!-- TABS NAV -->
+<div class="tabs-wrapper">
+  <div class="tabs-nav">
+    <button class="tab-btn active" onclick="switchTab('productos', this)">📦 Productos</button>
+    <button class="tab-btn" onclick="switchTab('comparativa', this)">🔍 Comparativa</button>
+    <button class="tab-btn" onclick="switchTab('dolores', this)">⚠️ Puntos de dolor</button>
   </div>
 </div>
 
-<div class="grid">
+<!-- TAB: PRODUCTOS -->
+<div id="tab-productos" class="tab-panel active">
+  <div class="grid">
 
-  <!-- CVU ARS -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title-group">
-        <div class="card-product">CVU ARS</div>
-        <div class="card-site">MLA · Argentina · Pesos</div>
+    <!-- CVU ARS -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <div class="card-product">CVU ARS</div>
+          <div class="card-site">MLA · Argentina · Pesos</div>
+        </div>
+        <div class="card-tags">
+          <span class="badge mf">MF</span>
+          <span class="badge no">✗ rechazo</span>
+        </div>
       </div>
-      <div class="card-tags">
-        <span class="badge mf">MF</span>
-        <span class="badge no">✗ rechazo</span>
+      <div class="card-body">
+        <div class="rechazo-row">
+          <span class="rechazo-label">¿Se puede rechazar?</span>
+          <span class="pill no">✗ Solo bloqueo cautelar</span>
+        </div>
+        <div class="section">
+          <div class="section-label">¿Cómo funciona?</div>
+          <div class="section-text">
+            Transfer-in de pesos desde bancos locales vía CVU. El pago se aprueba antes de llegar a RISK: el dinero entra a la cuenta CITI de MP al crearse el Payin (por regulación COELSA), y el llamado a RISK ocurre cuando el pago ya tiene <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">status=approved</code>. Payments no interpreta la respuesta de RISK → siempre aprueba.
+            <br><br>
+            Mecanismo disponible: <strong>bloqueo cautelar 48hs</strong> + revisión manual. El seguimiento de habilitación de rechazos se hace en <strong>#rechazos-en-transfer-in-hisp</strong> (contacto: Federico Quiroga).
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Tablas clave</div>
+          <div class="tables-block">
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.cvu_365dias_pagos_mtejera</div>
+              <div class="table-desc">Pagos (fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN)</div>
+            </div>
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.cvu_365dias_base_total_mtejera</div>
+              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code> · incluye denuncias P2P</div>
+            </div>
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.dashboard_cautelar_cvu_mla_mtejera</div>
+              <div class="table-desc">Dashboard del flujo cautelar</div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Links de utilidad</div>
+          <div class="links">
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1LwON14m_Jfq3UjvLm77ernCMBOmy9IaNsMP2eHbvOpw/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU ARS</span>
+            </a>
+            <a class="link-item" href="https://script.google.com/a/macros/mercadolibre.com/s/AKfycbxOUNFpXkKztkJP6qmqB4eUHO6NpKyV5jbR5M9QCTRw-fce9w3Cv3uYqbpYo2jJ7WHnEg/exec" target="_blank">
+              <span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CVU ARS</span>
+            </a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/12O1wHP2z3lhCMYQ73la0BenW8iDW8-ZjaaOVkmDE614/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📋</span><span class="link-text">Evolución denuncias CPF</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card-body">
-      <div class="rechazo-row">
-        <span class="rechazo-label">¿Se puede rechazar?</span>
-        <span class="pill no">✗ Solo bloqueo cautelar</span>
-      </div>
-      <div class="section">
-        <div class="section-label">¿Cómo funciona?</div>
-        <div class="section-text">
-          Transfer-in de pesos desde bancos locales vía CVU. El pago se aprueba antes de llegar a RISK: el dinero entra a la cuenta CITI de MP al crearse el Payin (por regulación COELSA), y el llamado a RISK ocurre cuando el pago ya tiene <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">status=approved</code>. Payments no interpreta la respuesta de RISK → siempre aprueba.
-          <br><br>
-          Mecanismo disponible: <strong>bloqueo cautelar 48hs</strong> + revisión manual. El seguimiento de habilitación de rechazos se hace en <strong>#rechazos-en-transfer-in-hisp</strong> (contacto: Federico Quiroga).
+
+    <!-- CVU DOL/DCE -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <div class="card-product">CVU DOL / DCE</div>
+          <div class="card-site">MLA · Argentina · Dólares</div>
+        </div>
+        <div class="card-tags">
+          <span class="badge pi">PI</span>
+          <span class="badge ok">✓ rechazo</span>
         </div>
       </div>
-      <div class="section">
-        <div class="section-label">Tablas clave</div>
-        <div class="tables-block">
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.cvu_365dias_pagos_mtejera</div>
-            <div class="table-desc">Pagos (fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN)</div>
-          </div>
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.cvu_365dias_base_total_mtejera</div>
-            <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code> · incluye denuncias P2P</div>
-          </div>
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.dashboard_cautelar_cvu_mla_mtejera</div>
-            <div class="table-desc">Dashboard del flujo cautelar</div>
+      <div class="card-body">
+        <div class="rechazo-row">
+          <span class="rechazo-label">¿Se puede rechazar?</span>
+          <span class="pill yes">✓ Sí</span>
+        </div>
+        <div class="section">
+          <div class="section-label">¿Cómo funciona?</div>
+          <div class="section-text">
+            Transfer-in en dólares (DOL) y dólares cripto equivalentes (DCE) vía CVU. A diferencia del flujo ARS, este opera como Payment Intent (PI), donde RISK puede influir en el resultado. El modelo de riesgo utilizado es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">mf_mla_dol_default</code>.
+            <br><br>
+            La marca STO combina dos fuentes: SCALABILITY_INDIVIDUALS_COMPLAINTS y la tabla <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">sto_bq</code> con <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">flow_type='PI'</code>.
           </div>
         </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Links de utilidad</div>
-        <div class="links">
-          <a class="link-item" href="https://docs.google.com/spreadsheets/d/1LwON14m_Jfq3UjvLm77ernCMBOmy9IaNsMP2eHbvOpw/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU ARS</span>
-          </a>
-          <a class="link-item" href="https://script.google.com/a/macros/mercadolibre.com/s/AKfycbxOUNFpXkKztkJP6qmqB4eUHO6NpKyV5jbR5M9QCTRw-fce9w3Cv3uYqbpYo2jJ7WHnEg/exec" target="_blank">
-            <span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CVU ARS</span>
-          </a>
-          <a class="link-item" href="https://docs.google.com/spreadsheets/d/12O1wHP2z3lhCMYQ73la0BenW8iDW8-ZjaaOVkmDE614/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📋</span><span class="link-text">Evolución denuncias CPF</span>
-          </a>
+        <div class="section">
+          <div class="section-label">Tablas clave</div>
+          <div class="tables-block">
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.cvu_usd_365dias_pagos_mtejera</div>
+              <div class="table-desc">Pagos DOL/DCE · modelo: mf_mla_dol_default</div>
+            </div>
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.cvu_usd_365dias_base_total_mtejera</div>
+              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code></div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Links de utilidad</div>
+          <div class="links">
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1caRl9RNrxhN8EwjBJXFNJrP392oj5NOxLByyx5Y_ZKQ/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU DOL/DCE</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- CLABE -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <div class="card-product">CLABE</div>
+          <div class="card-site">MLM · México</div>
+        </div>
+        <div class="card-tags">
+          <span class="badge pi">PI</span>
+          <span class="badge ok">✓ rechazo</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="rechazo-row">
+          <span class="rechazo-label">¿Se puede rechazar?</span>
+          <span class="pill yes">✓ Sí</span>
+        </div>
+        <div class="section">
+          <div class="section-label">¿Cómo funciona?</div>
+          <div class="section-text">
+            Transfer-in vía CLABE (número de cuenta bancaria estándar mexicano). Opera como Payment Intent. La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code> (no BT_MP_PAY_PAYMENTS). El ID clave para joins es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_EXTERNAL_ID</code>.
+            <br><br>
+            Modelo de riesgo: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlm_pix_default</code>. Rechazos <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">high_risk</code> visibles en el campo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_STATUS_DETAIL</code>.
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Tablas clave</div>
+          <div class="tables-block">
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.clabe_365dias_pagos_mtejera</div>
+              <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlm_pix_default</div>
+            </div>
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.clabe_365dias_base_total_mtejera</div>
+              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">clabe_sto</code> · incluye denuncias P2P</div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Links de utilidad</div>
+          <div class="links">
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Z3ZGlpobCFUKrBdZOXXHlIduYjq42_U2suk6GMsIKyc/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CLABE</span>
+            </a>
+            <a class="link-item" href="https://script.google.com/a/macros/mercadolibre.com/s/AKfycbxqcALV2ubPsvs59xRMQpZ8Ht1Q0iLBX0wooxS6DwgfF5S8mvQ89A89uQGkmBNtelg8/exec" target="_blank">
+              <span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CLABE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEF -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <div class="card-product">TEF</div>
+          <div class="card-site">MLC · Chile</div>
+        </div>
+        <div class="card-tags">
+          <span class="badge mf">MF</span>
+          <span class="badge review">⚠ en revisión</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="rechazo-row">
+          <span class="rechazo-label">¿Se puede rechazar?</span>
+          <span class="pill rev">⚠ En revisión</span>
+        </div>
+        <div class="section">
+          <div class="section-label">¿Cómo funciona?</div>
+          <div class="section-text">
+            Transferencia electrónica de fondos en Chile (equivalente al débito inmediato). Opera como Money Flow. Hoy no se interpreta la respuesta de RISK → el pago se acredita siempre. El único mecanismo disponible es el <strong>bloqueo cautelar</strong>, con targets muy estrictos (eficiencia ~10%, fricción &lt; 10 cuentas/día).
+            <br><br>
+            Se está trabajando en habilitar rechazos: si Payments interpreta la respuesta de RISK, sería posible. Poroto cargado: <strong>SMPR-59886</strong>. Reuniones en curso con Payins, Payments y Banking Connections.
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Tablas clave</div>
+          <div class="tables-block">
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.tef_365dias_pagos_mtejera</div>
+              <div class="table-desc">Pagos TEF · fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN</div>
+            </div>
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.tef_365dias_base_total_mtejera</div>
+              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">tef_sto</code></div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Links de utilidad</div>
+          <div class="links">
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Gp3sve0Kr1kvZQBW0v8wk6F_3cUQ2agObGAQfD8mknQ/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — TEF</span>
+            </a>
+            <a class="link-item" href="https://docs.google.com/document/d/1To6eCxomYHgGbvl1Fn0jcGoZDDD1kzlJDMzEZJtiycA/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📝</span><span class="link-text">Track habilitación de rechazos TEF</span>
+            </a>
+            <a class="link-item" href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank">
+              <span class="link-icon">🎫</span><span class="link-text">Poroto Jira — SMPR-59886</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- URUTEC -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <div class="card-product">URUTEC</div>
+          <div class="card-site">MLU · Uruguay</div>
+        </div>
+        <div class="card-tags">
+          <span class="badge pi">PI</span>
+          <span class="badge ok">✓ rechazo</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="rechazo-row">
+          <span class="rechazo-label">¿Se puede rechazar?</span>
+          <span class="pill yes">✓ Sí</span>
+        </div>
+        <div class="section">
+          <div class="section-label">¿Cómo funciona?</div>
+          <div class="section-text">
+            Transfer-in en Uruguay vía red URUTEC. Opera como Payment Intent. La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code>. Modelo de riesgo: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlu_tri_default</code>.
+            <br><br>
+            La tabla de pagos tiene actualización <strong>incremental</strong> (solo reborra/reinserta los últimos 90 días). Repatriaciones iniciadas en <strong>diciembre 2025</strong>.
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Tablas clave</div>
+          <div class="tables-block">
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.urutec_365dias_pagos_mtejera</div>
+              <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlu_tri_default · actualiz. incremental</div>
+            </div>
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.urutec_365dias_base_total_mtejera</div>
+              <div class="table-desc">Tabla final · STO: SCALABILITY + sto_bq</div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Links de utilidad</div>
+          <div class="links">
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1C8y4gYREYYzXDWi1xxfm0SUw-LgUIT6cIWNaMHc2TZQ/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — URUTEC</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PSE -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <div class="card-product">PSE</div>
+          <div class="card-site">MCO · Colombia</div>
+        </div>
+        <div class="card-tags">
+          <span class="badge no">✗ rechazo</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="rechazo-row">
+          <span class="rechazo-label">¿Se puede rechazar?</span>
+          <span class="pill no">✗ Solo bloqueo cautelar</span>
+        </div>
+        <div class="section">
+          <div class="section-label">¿Cómo funciona?</div>
+          <div class="section-text">
+            Transfer-in en Colombia vía PSE (Pagos Seguros en Línea), la red interbancaria local. Operación de tipo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">account_fund</code> con método de pago <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">bank_transfer / pse</code>.
+            <br><br>
+            Solo se puede aplicar bloqueo cautelar. Aún no se cuenta con una marca de fraude (STO) para este producto.
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">Tablas clave</div>
+          <div class="tables-block">
+            <div class="table-item">
+              <div class="table-name">SBOX_PF_DA.pse_365dias_pagos_mtejera</div>
+              <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYMENTS_NRT · filtro: PAY_PAYMENT_METHOD_ID='pse'</div>
+            </div>
+          </div>
+          <div class="note warn">⚠ Sin tabla final ni marca STO disponible aún para PSE.</div>
+        </div>
+        <div class="section">
+          <div class="section-label">Links de utilidad</div>
+          <div class="links">
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1_eoeXvzSv1dTk5cJLu2WqQLnx5mHuU9OcgwFTEmeTvc/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — PSE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-  <!-- CVU DOL/DCE -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title-group">
-        <div class="card-product">CVU DOL / DCE</div>
-        <div class="card-site">MLA · Argentina · Dólares</div>
-      </div>
-      <div class="card-tags">
-        <span class="badge pi">PI</span>
-        <span class="badge ok">✓ rechazo</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="rechazo-row">
-        <span class="rechazo-label">¿Se puede rechazar?</span>
-        <span class="pill yes">✓ Sí</span>
-      </div>
-      <div class="section">
-        <div class="section-label">¿Cómo funciona?</div>
-        <div class="section-text">
-          Transfer-in en dólares (DOL) y dólares cripto equivalentes (DCE) vía CVU. A diferencia del flujo ARS, este opera como Payment Intent (PI), donde RISK puede influir en el resultado. El modelo de riesgo utilizado es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">mf_mla_dol_default</code>.
-          <br><br>
-          La marca STO combina dos fuentes: SCALABILITY_INDIVIDUALS_COMPLAINTS y la tabla <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">sto_bq</code> con <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">flow_type='PI'</code>.
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Tablas clave</div>
-        <div class="tables-block">
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.cvu_usd_365dias_pagos_mtejera</div>
-            <div class="table-desc">Pagos DOL/DCE · modelo: mf_mla_dol_default</div>
-          </div>
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.cvu_usd_365dias_base_total_mtejera</div>
-            <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code></div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Links de utilidad</div>
-        <div class="links">
-          <a class="link-item" href="https://docs.google.com/spreadsheets/d/1caRl9RNrxhN8EwjBJXFNJrP392oj5NOxLByyx5Y_ZKQ/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU DOL/DCE</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CLABE -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title-group">
-        <div class="card-product">CLABE</div>
-        <div class="card-site">MLM · México</div>
-      </div>
-      <div class="card-tags">
-        <span class="badge pi">PI</span>
-        <span class="badge ok">✓ rechazo</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="rechazo-row">
-        <span class="rechazo-label">¿Se puede rechazar?</span>
-        <span class="pill yes">✓ Sí</span>
-      </div>
-      <div class="section">
-        <div class="section-label">¿Cómo funciona?</div>
-        <div class="section-text">
-          Transfer-in vía CLABE (número de cuenta bancaria estándar mexicano). Opera como Payment Intent. La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code> (no BT_MP_PAY_PAYMENTS). El ID clave para joins es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_EXTERNAL_ID</code>.
-          <br><br>
-          Modelo de riesgo: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlm_pix_default</code>. Rechazos <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">high_risk</code> visibles en el campo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_STATUS_DETAIL</code>.
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Tablas clave</div>
-        <div class="tables-block">
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.clabe_365dias_pagos_mtejera</div>
-            <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlm_pix_default</div>
-          </div>
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.clabe_365dias_base_total_mtejera</div>
-            <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">clabe_sto</code> · incluye denuncias P2P</div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Links de utilidad</div>
-        <div class="links">
-          <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Z3ZGlpobCFUKrBdZOXXHlIduYjq42_U2suk6GMsIKyc/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CLABE</span>
-          </a>
-          <a class="link-item" href="https://script.google.com/a/macros/mercadolibre.com/s/AKfycbxqcALV2ubPsvs59xRMQpZ8Ht1Q0iLBX0wooxS6DwgfF5S8mvQ89A89uQGkmBNtelg8/exec" target="_blank">
-            <span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CLABE</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TEF -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title-group">
-        <div class="card-product">TEF</div>
-        <div class="card-site">MLC · Chile</div>
-      </div>
-      <div class="card-tags">
-        <span class="badge mf">MF</span>
-        <span class="badge review">⚠ en revisión</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="rechazo-row">
-        <span class="rechazo-label">¿Se puede rechazar?</span>
-        <span class="pill rev">⚠ En revisión</span>
-      </div>
-      <div class="section">
-        <div class="section-label">¿Cómo funciona?</div>
-        <div class="section-text">
-          Transferencia electrónica de fondos en Chile (equivalente al débito inmediato). Opera como Money Flow. Hoy no se interpreta la respuesta de RISK → el pago se acredita siempre. El único mecanismo disponible es el <strong>bloqueo cautelar</strong>, con targets muy estrictos (eficiencia ~10%, fricción &lt; 10 cuentas/día).
-          <br><br>
-          Se está trabajando en habilitar rechazos: si Payments interpreta la respuesta de RISK, sería posible. Poroto cargado: <strong>SMPR-59886</strong>. Reuniones en curso con Payins, Payments y Banking Connections.
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Tablas clave</div>
-        <div class="tables-block">
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.tef_365dias_pagos_mtejera</div>
-            <div class="table-desc">Pagos TEF · fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN</div>
-          </div>
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.tef_365dias_base_total_mtejera</div>
-            <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">tef_sto</code></div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Links de utilidad</div>
-        <div class="links">
-          <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Gp3sve0Kr1kvZQBW0v8wk6F_3cUQ2agObGAQfD8mknQ/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — TEF</span>
-          </a>
-          <a class="link-item" href="https://docs.google.com/document/d/1To6eCxomYHgGbvl1Fn0jcGoZDDD1kzlJDMzEZJtiycA/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📝</span><span class="link-text">Track habilitación de rechazos TEF</span>
-          </a>
-          <a class="link-item" href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank">
-            <span class="link-icon">🎫</span><span class="link-text">Poroto Jira — SMPR-59886</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- URUTEC -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title-group">
-        <div class="card-product">URUTEC</div>
-        <div class="card-site">MLU · Uruguay</div>
-      </div>
-      <div class="card-tags">
-        <span class="badge pi">PI</span>
-        <span class="badge ok">✓ rechazo</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="rechazo-row">
-        <span class="rechazo-label">¿Se puede rechazar?</span>
-        <span class="pill yes">✓ Sí</span>
-      </div>
-      <div class="section">
-        <div class="section-label">¿Cómo funciona?</div>
-        <div class="section-text">
-          Transfer-in en Uruguay vía red URUTEC. Opera como Payment Intent. La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code>. Modelo de riesgo: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlu_tri_default</code>.
-          <br><br>
-          La tabla de pagos tiene actualización <strong>incremental</strong> (solo reborra/reinserta los últimos 90 días). Repatriaciones iniciadas en <strong>diciembre 2025</strong>.
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Tablas clave</div>
-        <div class="tables-block">
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.urutec_365dias_pagos_mtejera</div>
-            <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlu_tri_default · actualiz. incremental</div>
-          </div>
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.urutec_365dias_base_total_mtejera</div>
-            <div class="table-desc">Tabla final · STO: SCALABILITY + sto_bq</div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Links de utilidad</div>
-        <div class="links">
-          <a class="link-item" href="https://docs.google.com/spreadsheets/d/1C8y4gYREYYzXDWi1xxfm0SUw-LgUIT6cIWNaMHc2TZQ/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — URUTEC</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PSE -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title-group">
-        <div class="card-product">PSE</div>
-        <div class="card-site">MCO · Colombia</div>
-      </div>
-      <div class="card-tags">
-        <span class="badge no">✗ rechazo</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="rechazo-row">
-        <span class="rechazo-label">¿Se puede rechazar?</span>
-        <span class="pill no">✗ Solo bloqueo cautelar</span>
-      </div>
-      <div class="section">
-        <div class="section-label">¿Cómo funciona?</div>
-        <div class="section-text">
-          Transfer-in en Colombia vía PSE (Pagos Seguros en Línea), la red interbancaria local. Operación de tipo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">account_fund</code> con método de pago <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">bank_transfer / pse</code>.
-          <br><br>
-          Solo se puede aplicar bloqueo cautelar. Aún no se cuenta con una marca de fraude (STO) para este producto.
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-label">Tablas clave</div>
-        <div class="tables-block">
-          <div class="table-item">
-            <div class="table-name">SBOX_PF_DA.pse_365dias_pagos_mtejera</div>
-            <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYMENTS_NRT · filtro: PAY_PAYMENT_METHOD_ID='pse'</div>
-          </div>
-        </div>
-        <div class="note warn">⚠ Sin tabla final ni marca STO disponible aún para PSE.</div>
-      </div>
-      <div class="section">
-        <div class="section-label">Links de utilidad</div>
-        <div class="links">
-          <a class="link-item" href="https://docs.google.com/spreadsheets/d/1_eoeXvzSv1dTk5cJLu2WqQLnx5mHuU9OcgwFTEmeTvc/edit?usp=sharing" target="_blank">
-            <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — PSE</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
 
-<div class="footer">
-  <span>Transfer-In HISP · Money In · <code style="font-family:monospace;">meli-bi-data.SBOX_PF_DA</code> · actualización diaria · últimos 365 días</span>
-  <span>Fuente STO: SCALABILITY_INDIVIDUALS_COMPLAINTS + sto_bq</span>
+<!-- TAB: COMPARATIVA -->
+<div id="tab-comparativa" class="tab-panel">
+  <div class="comparativa-wrapper">
+    <table class="comparativa-table">
+      <thead>
+        <tr>
+          <th class="col-label"></th>
+          <th>MLA ARS</th>
+          <th>MLM</th>
+          <th>MLA DOL</th>
+          <th>MLC</th>
+          <th>MLU</th>
+          <th>MCO</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- GENERAL -->
+        <tr class="group-header">
+          <td colspan="7">⚙ General</td>
+        </tr>
+        <tr>
+          <td class="row-label">Prediction</td>
+          <td><span class="mono-small">mf_mla_tri_default</span></td>
+          <td><span class="mono-small">pi_mlm_pix_default</span></td>
+          <td><span class="mono-small">mf_mla_dol_default</span></td>
+          <td><span class="mono-small">mf_mlc_tri_default</span></td>
+          <td><span class="mono-small">pi_mlu_tri_default</span></td>
+          <td><span class="mono-small">mf_mlc_tri_default</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Flujo de llamados</td>
+          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> Payments <span class="arr">→</span> RISK</span></td>
+          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> RISK</span></td>
+          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> Payments <span class="arr">→</span> RISK</span></td>
+          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> Payments <span class="arr">→</span> RISK</span></td>
+          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> RISK</span></td>
+          <td><span class="flow-text">Payments <span class="arr">→</span> RISK <span class="arr">→</span> Cashnet <span class="arr">→</span> ACH</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Se interpreta respuesta de RISK</td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">¿Podemos rechazar?</td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+        </tr>
+        <tr class="subrow">
+          <td class="row-label row-sublabel">↳ Motivo</td>
+          <td style="font-size:12px;color:#94a3b8;">Integración COELSA</td>
+          <td><span class="chip dash">—</span></td>
+          <td><span class="chip dash">—</span></td>
+          <td style="font-size:12px;color:#94a3b8;">Infra MP</td>
+          <td><span class="chip dash">—</span></td>
+          <td style="font-size:12px;color:#94a3b8;">?</td>
+        </tr>
+        <tr>
+          <td class="row-label">Marca de fraude STO</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Info de titularidad</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Medida desde el score</td>
+          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
+          <td><span class="chip rechazo">Rechazo</span></td>
+          <td><span class="chip rechazo">Rechazo</span></td>
+          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
+          <td><span class="chip rechazo">Rechazo</span></td>
+          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Gestión de casos</td>
+          <td style="font-size:12px;color:#94a3b8;">Revisión REPs</td>
+          <td><span class="chip dash">—</span></td>
+          <td><span class="chip dash">—</span></td>
+          <td style="font-size:12px;color:#94a3b8;">Second Score</td>
+          <td style="font-size:12px;color:#94a3b8;">PACO</td>
+          <td style="font-size:12px;color:#94a3b8;">?</td>
+        </tr>
+
+        <!-- REGLAS DE PREVENCIÓN -->
+        <tr class="group-header">
+          <td colspan="7">🛡 Reglas de Prevención</td>
+        </tr>
+        <tr>
+          <td class="row-label">Contención usuarios nuevos</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Cambio de comportamiento</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip si">✓</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Denuncias previas</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Velocity</td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+          <td><span class="chip no">✗</span></td>
+        </tr>
+
+        <!-- ALARMAS -->
+        <tr class="group-header">
+          <td colspan="7">🚨 Alarmas</td>
+        </tr>
+        <tr>
+          <td class="row-label">Aumento incoming STO</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip dash">—</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Caída en aprobación / incremento BC</td>
+          <td><span class="chip dash">—</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip dash">—</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip dash">—</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Aumento incoming TPN, TPV o MAFs</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
 </div>
+
+
+<!-- TAB: PUNTOS DE DOLOR -->
+<div id="tab-dolores" class="tab-panel">
+  <div class="comparativa-wrapper">
+    <table class="comparativa-table" style="table-layout:fixed;">
+      <colgroup>
+        <col style="width:34%">
+        <col style="width:22%">
+        <col style="width:22%">
+        <col style="width:22%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="col-label"></th>
+          <th>MLC</th>
+          <th>MLU</th>
+          <th>MCO</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="group-header">
+          <td colspan="4">⚙ General</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Prediction</td>
+          <td><span class="mono-small">mf_mlc_tri_default</span></td>
+          <td><span class="mono-small">pi_mlu_tri_default</span></td>
+          <td><span class="mono-small">mf_mlc_tri_default</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Flujo de llamados</td>
+          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> Payments <span class="arr">→</span> RISK</span></td>
+          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> RISK</span></td>
+          <td><span class="flow-text">Payments <span class="arr">→</span> RISK <span class="arr">→</span> Cashnet <span class="arr">→</span> ACH</span></td>
+        </tr>
+
+        <tr>
+          <td class="row-label pain-label">⚡ Se interpreta respuesta de RISK</td>
+          <td class="pain-cell"><span class="wip-badge">⏳</span> <a href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank">SMPR-59886</a></td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+        </tr>
+        <tr>
+          <td class="row-label pain-label">⚡ ¿Podemos rechazar?</td>
+          <td class="pain-cell"><span class="wip-badge">⏳</span> <a href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank">SMPR-59886</a></td>
+          <td><span class="chip si">✓</span></td>
+          <td class="pain-cell"><span class="chip no">✗</span></td>
+        </tr>
+
+        <tr class="subrow">
+          <td class="row-label row-sublabel">↳ Motivo</td>
+          <td style="font-size:12px;color:#94a3b8;">Infra MP</td>
+          <td><span class="chip dash">—</span></td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;">Indagar más en cuál es el motivo</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Marca de fraude STO</td>
+          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Planilla ACH + Mesa con Emi</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Medida desde el score</td>
+          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
+          <td><span class="chip rechazo">Rechazo</span></td>
+          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
+        </tr>
+
+        <tr>
+          <td class="row-label pain-label">⚡ Info de titularidad</td>
+          <td class="pain-cell"><span class="wip-badge">⏳</span> <a href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-61225" target="_blank">SMPR-61225</a></td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Conversación con URUTEC + Feature PROXY</td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Solicitud ACH</td>
+        </tr>
+        <tr>
+          <td class="row-label pain-label">⚡ Gestión de casos</td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Second Score + Rep Riesgo Receiver</td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> PACO</td>
+          <td class="pain-cell" style="font-size:12px;color:#a78bfa;">?</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function switchTab(name, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
 
 </body>
 </html>
