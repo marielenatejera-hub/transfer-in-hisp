@@ -385,7 +385,9 @@
           <div class="section-text">
             Transfer-in de pesos desde bancos locales vía CVU. El pago se aprueba antes de llegar a RISK: el dinero entra a la cuenta CITI de MP al crearse el Payin (por regulación COELSA), y el llamado a RISK ocurre cuando el pago ya tiene <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">status=approved</code>. Payments no interpreta la respuesta de RISK → siempre aprueba.
             <br><br>
-            Mecanismo disponible: <strong>bloqueo cautelar 48hs</strong> + revisión manual. El seguimiento de habilitación de rechazos se hace en <strong>#rechazos-en-transfer-in-hisp</strong> (contacto: Federico Quiroga).
+            Mecanismo disponible: <strong>bloqueo cautelar 48hs</strong>. El caso se revisa por el Rep de Riesgo Receiver (agente de IA).
+            <br><br>
+            En 2Q2026 se obtuvo nueva info desde Payins (Matias Sosa): existe un posible mecanismo para rechazar (<strong>Acreditaciones CVU</strong>). El seguimiento de habilitación de rechazos se hace en <strong>#rechazos-en-transfer-in-hisp</strong>.
           </div>
         </div>
         <div class="section">
@@ -417,6 +419,9 @@
             <a class="link-item" href="https://docs.google.com/spreadsheets/d/12O1wHP2z3lhCMYQ73la0BenW8iDW8-ZjaaOVkmDE614/edit?usp=sharing" target="_blank">
               <span class="link-icon">📋</span><span class="link-text">Evolución denuncias CPF</span>
             </a>
+            <a class="link-item" href="https://grid.adminml.com/d/01KTA3JXTM2CRV2GVN9GXB8N6G/view" target="_blank">
+              <span class="link-icon">📈</span><span class="link-text">Acreditaciones CVU</span>
+            </a>
           </div>
         </div>
       </div>
@@ -442,9 +447,9 @@
         <div class="section">
           <div class="section-label">¿Cómo funciona?</div>
           <div class="section-text">
-            Transfer-in en dólares (DOL) y dólares cripto equivalentes (DCE) vía CVU. A diferencia del flujo ARS, este opera como Payment Intent (PI), donde RISK puede influir en el resultado. El modelo de riesgo utilizado es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">mf_mla_dol_default</code>.
+            Transfer-in en dólares (DOL) vía CVU. A diferencia del flujo ARS, la respuesta de RISK se interpreta, y podemos rechazar. El modelo de riesgo utilizado es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">mf_mla_dol_default</code>.
             <br><br>
-            La marca STO combina dos fuentes: SCALABILITY_INDIVIDUALS_COMPLAINTS y la tabla <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">sto_bq</code> con <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">flow_type='PI'</code>.
+            La marca STO combina dos fuentes: SCALABILITY_INDIVIDUALS_COMPLAINTS y la tabla <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">sto_bq</code>.
           </div>
         </div>
         <div class="section">
@@ -491,9 +496,9 @@
         <div class="section">
           <div class="section-label">¿Cómo funciona?</div>
           <div class="section-text">
-            Transfer-in vía CLABE (número de cuenta bancaria estándar mexicano). Opera como Payment Intent. La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code> (no BT_MP_PAY_PAYMENTS). El ID clave para joins es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_EXTERNAL_ID</code>.
+            Transfer-in vía CLABE (número de cuenta bancaria estándar mexicano). La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code>. El ID clave para joins es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_EXTERNAL_ID</code>.
             <br><br>
-            Modelo de riesgo: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlm_pix_default</code>. Rechazos <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">high_risk</code> visibles en el campo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_STATUS_DETAIL</code>.
+            Modelo Naomi: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlm_pix_default</code>. Rechazos <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">high_risk</code> visibles en el campo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">PYN_STATUS_DETAIL</code>.
           </div>
         </div>
         <div class="section">
@@ -543,7 +548,7 @@
         <div class="section">
           <div class="section-label">¿Cómo funciona?</div>
           <div class="section-text">
-            Transferencia electrónica de fondos en Chile (equivalente al débito inmediato). Opera como Money Flow. Hoy no se interpreta la respuesta de RISK → el pago se acredita siempre. El único mecanismo disponible es el <strong>bloqueo cautelar</strong>, con targets muy estrictos (eficiencia ~10%, fricción &lt; 10 cuentas/día).
+            Transferencia electrónica de fondos en Chile (equivalente al débito inmediato). Hoy no se interpreta la respuesta de RISK → el pago se acredita siempre. El único mecanismo disponible es el <strong>bloqueo cautelar</strong>, con targets muy estrictos (eficiencia ~10%, fricción &lt; 10 cuentas/día).
             <br><br>
             Se está trabajando en habilitar rechazos: si Payments interpreta la respuesta de RISK, sería posible. Poroto cargado: <strong>SMPR-59886</strong>. Reuniones en curso con Payins, Payments y Banking Connections.
           </div>
@@ -601,9 +606,9 @@
         <div class="section">
           <div class="section-label">¿Cómo funciona?</div>
           <div class="section-text">
-            Transfer-in en Uruguay vía red URUTEC. Opera como Payment Intent. La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code>. Modelo de riesgo: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlu_tri_default</code>.
+            Transfer-in en Uruguay vía red URUTEC. La fuente principal es <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">BT_MP_PAY_PAYIN</code>. Modelo de Naomi: <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">pi_mlu_tri_default</code>.
             <br><br>
-            La tabla de pagos tiene actualización <strong>incremental</strong> (solo reborra/reinserta los últimos 90 días). Repatriaciones iniciadas en <strong>diciembre 2025</strong>.
+            Repatriaciones iniciadas en <strong>diciembre 2025</strong>.
           </div>
         </div>
         <div class="section">
@@ -655,9 +660,11 @@
         <div class="section">
           <div class="section-label">¿Cómo funciona?</div>
           <div class="section-text">
-            Transfer-in en Colombia vía PSE (Pagos Seguros en Línea), la red interbancaria local. Operación de tipo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">account_fund</code> con método de pago <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">bank_transfer / pse</code>.
+            Transfer-in en Colombia vía PSE, la red interbancaria local. Operación de tipo <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">account_fund</code> con método de pago <code style="font-family:monospace;font-size:11px;background:#1e293b;padding:1px 4px;border-radius:3px;">bank_transfer / pse</code>. Por su forma de funcionamiento, se parece más a un DEBIN que a un Transfer-in.
             <br><br>
-            Solo se puede aplicar bloqueo cautelar. Aún no se cuenta con una marca de fraude (STO) para este producto.
+            Solo se puede aplicar bloqueo cautelar. Cuando se realizan las validaciones el dinero ya se encuentra en la plataforma. Cashnet es quien impulsa los pagos, pero no tiene interacción con RISK.
+            <br><br>
+            Aún no se cuenta con una marca de fraude (STO) para este producto.
           </div>
         </div>
         <div class="section">
@@ -676,8 +683,11 @@
             <a class="link-item" href="https://docs.google.com/spreadsheets/d/1_eoeXvzSv1dTk5cJLu2WqQLnx5mHuU9OcgwFTEmeTvc/edit?usp=sharing" target="_blank">
               <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — PSE</span>
             </a>
+            <a class="link-item" href="https://docs.google.com/document/d/1K040aVHNR2ofgMzGVdLxoG2wsL1ZHy7ZZQFkiDVtoqg/edit?usp=sharing" target="_blank">
+              <span class="link-icon">📝</span><span class="link-text">Paso a paso PSE - Mercado Pago</span>
+            </a>
             <a class="link-item" href="https://grid.adminml.com/d/01KVBM56639PT8KJ0HDN5K2RHB/view" target="_blank">
-            <span class="link-icon">📋</span><span class="link-text">Plan de trabajo — PSE MCO</span>
+              <span class="link-icon">📋</span><span class="link-text">Plan de trabajo — PSE MCO</span>
             </a>
           </div>
         </div>
