@@ -355,7 +355,6 @@
   <div class="tabs-nav">
     <button class="tab-btn active" onclick="switchTab('productos', this)">📦 Productos</button>
     <button class="tab-btn" onclick="switchTab('comparativa', this)">🔍 Comparativa</button>
-    <button class="tab-btn" onclick="switchTab('dolores', this)">⚠️ Puntos de dolor</button>
   </div>
 </div>
 
@@ -793,15 +792,15 @@
           <td><span class="chip si">✓</span></td>
           <td><span class="chip si">✓</span></td>
           <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Proceso simil legitimidade con Repa</td>
         </tr>
         <tr>
           <td class="row-label">Info de titularidad</td>
           <td><span class="chip si">✓</span></td>
           <td><span class="chip si">✓</span></td>
           <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Solicitud ACH</td>
+          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Conversación con URUTEC + Feature PROXY</td>
           <td><span class="chip no">✗</span></td>
         </tr>
         <tr>
@@ -922,96 +921,6 @@
           <td><span class="chip si">✓</span></td>
           <td><span class="chip si">✓</span></td>
           <td><span class="chip si">✓</span></td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
-<!-- TAB: PUNTOS DE DOLOR -->
-<div id="tab-dolores" class="tab-panel">
-  <div class="comparativa-wrapper">
-    <table class="comparativa-table" style="table-layout:fixed;">
-      <colgroup>
-        <col style="width:34%">
-        <col style="width:22%">
-        <col style="width:22%">
-        <col style="width:22%">
-      </colgroup>
-      <thead>
-        <tr>
-          <th class="col-label"></th>
-          <th>MLC</th>
-          <th>MLU</th>
-          <th>MCO</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <tr class="group-header">
-          <td colspan="4">⚙ General</td>
-        </tr>
-
-        <tr>
-          <td class="row-label">Prediction</td>
-          <td><span class="mono-small">mf_mlc_tri_default</span></td>
-          <td><span class="mono-small">pi_mlu_tri_default</span></td>
-          <td><span class="mono-small">mf_mlc_tri_default</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Flujo de llamados</td>
-          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> Payments <span class="arr">→</span> RISK</span></td>
-          <td><span class="flow-text">BC <span class="arr">→</span> Payins <span class="arr">→</span> RISK</span></td>
-          <td><span class="flow-text">Payments <span class="arr">→</span> RISK <span class="arr">→</span> Cashnet <span class="arr">→</span> ACH</span></td>
-        </tr>
-
-        <tr>
-          <td class="row-label pain-label">⚡ Se interpreta respuesta de RISK</td>
-          <td class="pain-cell"><span class="wip-badge">⏳</span> <a href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank">SMPR-59886</a></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-        </tr>
-        <tr>
-          <td class="row-label pain-label">⚡ ¿Podemos rechazar?</td>
-          <td class="pain-cell"><span class="wip-badge">⏳</span> <a href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank">SMPR-59886</a></td>
-          <td><span class="chip si">✓</span></td>
-          <td class="pain-cell"><span class="chip no">✗</span></td>
-        </tr>
-
-        <tr class="subrow">
-          <td class="row-label row-sublabel">↳ Motivo</td>
-          <td style="font-size:12px;color:#94a3b8;">Infra MP</td>
-          <td><span class="chip dash">—</span></td>
-          <td class="pain-cell" style="font-size:11px;color:#a78bfa;">Indagar más en cuál es el motivo</td>
-        </tr>
-
-        <tr>
-          <td class="row-label">Marca de fraude STO</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Planilla ACH + Mesa con Emi</td>
-        </tr>
-
-        <tr>
-          <td class="row-label">Medida desde el score</td>
-          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
-          <td><span class="chip rechazo">Rechazo</span></td>
-          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
-        </tr>
-
-        <tr>
-          <td class="row-label pain-label">⚡ Info de titularidad</td>
-          <td class="pain-cell"><span class="wip-badge">⏳</span> <a href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-61225" target="_blank">SMPR-61225</a></td>
-          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Conversación con URUTEC + Feature PROXY</td>
-          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Solicitud ACH</td>
-        </tr>
-        <tr>
-          <td class="row-label pain-label">⚡ Gestión de casos</td>
-          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Second Score + Rep Riesgo Receiver</td>
-          <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> PACO</td>
-          <td class="pain-cell" style="font-size:12px;color:#a78bfa;">?</td>
         </tr>
 
       </tbody>
