@@ -30,7 +30,6 @@
     padding: 48px 24px;
   }
 
-  /* HEADER */
   .header {
     max-width: 1200px;
     margin: 0 auto 32px;
@@ -48,51 +47,21 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
-  h1 {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    color: #fff;
-  }
+  h1 { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; color: #fff; }
   h1 span { color: var(--accent); }
-  .subtitle {
-    margin-top: 8px;
-    font-size: 14px;
-    color: var(--muted);
-    font-weight: 300;
-  }
-  .legend {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 12px 16px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 12px;
-  }
-  .legend-item { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+  .subtitle { margin-top: 8px; font-size: 14px; color: var(--muted); font-weight: 300; }
+
   .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; }
-  .badge.mf { background: rgba(0,229,160,0.12); color: var(--accent); border: 1px solid rgba(0,229,160,0.3); }
-  .badge.pi { background: rgba(59,130,246,0.12); color: var(--accent2); border: 1px solid rgba(59,130,246,0.3); }
-  .badge.ok { background: rgba(0,229,160,0.12); color: var(--accent); }
-  .badge.warn { background: rgba(245,158,11,0.12); color: var(--accent3); }
-  .badge.no { background: rgba(239,68,68,0.12); color: var(--accent4); }
+  .badge.mf  { background: rgba(0,229,160,0.12); color: var(--accent); border: 1px solid rgba(0,229,160,0.3); }
+  .badge.pi  { background: rgba(59,130,246,0.12); color: var(--accent2); border: 1px solid rgba(59,130,246,0.3); }
+  .badge.ok  { background: rgba(0,229,160,0.12); color: var(--accent); }
+  .badge.warn{ background: rgba(245,158,11,0.12); color: var(--accent3); }
+  .badge.no  { background: rgba(239,68,68,0.12);  color: var(--accent4); }
   .badge.review { background: rgba(245,158,11,0.12); color: var(--accent3); border: 1px solid rgba(245,158,11,0.3); }
 
   /* TABS */
-  .tabs-wrapper {
-    max-width: 1200px;
-    margin: 0 auto 32px;
-  }
-  .tabs-nav {
-    display: flex;
-    gap: 4px;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0;
-  }
+  .tabs-wrapper { max-width: 1200px; margin: 0 auto 32px; }
+  .tabs-nav { display: flex; gap: 4px; border-bottom: 1px solid var(--border); }
   .tab-btn {
     padding: 10px 20px;
     background: none;
@@ -109,16 +78,11 @@
     bottom: -1px;
   }
   .tab-btn:hover { color: var(--text); background: var(--surface); }
-  .tab-btn.active {
-    color: var(--accent);
-    background: var(--surface);
-    border-color: var(--border);
-    border-bottom-color: var(--surface);
-  }
+  .tab-btn.active { color: var(--accent); background: var(--surface); border-color: var(--border); border-bottom-color: var(--surface); }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
-  /* GRID */
+  /* PRODUCTOS GRID */
   .grid {
     max-width: 1200px;
     margin: 0 auto;
@@ -126,8 +90,6 @@
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 20px;
   }
-
-  /* CARD */
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -147,7 +109,6 @@
   .card:nth-child(4) { animation-delay: 0.20s; }
   .card:nth-child(5) { animation-delay: 0.25s; }
   .card:nth-child(6) { animation-delay: 0.30s; }
-
   .card-header {
     padding: 20px 20px 16px;
     border-bottom: 1px solid var(--border);
@@ -162,20 +123,13 @@
   .card-body { padding: 20px; }
   .section { margin-bottom: 20px; }
   .section:last-child { margin-bottom: 0; }
-  .section-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
+  .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
   .section-text { font-size: 13px; line-height: 1.6; color: #94a3b8; }
   .rechazo-row { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
   .rechazo-label { font-size: 12px; color: var(--muted); }
   .pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; }
-  .pill.yes { background: rgba(0,229,160,0.1); color: var(--accent); border: 1px solid rgba(0,229,160,0.25); }
-  .pill.no  { background: rgba(239,68,68,0.1); color: var(--accent4); border: 1px solid rgba(239,68,68,0.25); }
+  .pill.yes { background: rgba(0,229,160,0.1);  color: var(--accent);  border: 1px solid rgba(0,229,160,0.25); }
+  .pill.no  { background: rgba(239,68,68,0.1);  color: var(--accent4); border: 1px solid rgba(239,68,68,0.25); }
   .pill.rev { background: rgba(245,158,11,0.1); color: var(--accent3); border: 1px solid rgba(245,158,11,0.25); }
   .links { display: flex; flex-direction: column; gap: 6px; }
   .link-item {
@@ -200,143 +154,149 @@
   .note.warn { background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2); color: #d9a54a; }
   .note.info { background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.2); color: #7ba7d4; }
 
-  /* COMPARISON TABLE */
-  .comparativa-wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    animation: fadeUp 0.4s ease both;
-  }
-  .comparativa-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    table-layout: fixed;
-  }
+  /* COMPARATIVA */
+  .comparativa-wrapper { max-width: 100%; margin: 0 auto; animation: fadeUp 0.4s ease both; }
+  .comparativa-table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
   .comparativa-table th,
-  .comparativa-table td {
-    padding: 9px 10px;
-    border: 1px solid var(--border);
-    text-align: center;
-    vertical-align: middle;
-  }
-  .comparativa-table th {
-    background: var(--surface2);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    white-space: nowrap;
-    width: 11%;
-  }
-  .comparativa-table th.col-label {
-    text-align: left;
-    color: var(--muted);
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    width: 22%;
-  }
-  .comparativa-table td {
-    color: #94a3b8;
-    background: var(--surface);
-  }
-  .comparativa-table td.row-label {
-    text-align: left;
-    color: var(--text);
-    font-weight: 500;
-    font-size: 13px;
-    background: var(--surface);
-    white-space: nowrap;
-  }
-  .comparativa-table tr.group-header td {
-    background: var(--surface2);
-    color: var(--accent);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-align: left;
-    padding: 8px 14px;
-    border-color: var(--border);
-  }
+  .comparativa-table td { padding: 9px 10px; border: 1px solid var(--border); text-align: center; vertical-align: middle; }
+  .comparativa-table th { background: var(--surface2); font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); white-space: nowrap; width: 11%; }
+  .comparativa-table th.col-label { text-align: left; color: var(--muted); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; width: 22%; }
+  .comparativa-table td { color: #94a3b8; background: var(--surface); }
+  .comparativa-table td.row-label { text-align: left; color: var(--text); font-weight: 500; font-size: 13px; background: var(--surface); white-space: nowrap; }
+  .comparativa-table tr.group-header td { background: var(--surface2); color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; text-align: left; padding: 8px 14px; }
   .comparativa-table tr:hover td { background: rgba(255,255,255,0.02); }
   .comparativa-table tr.group-header:hover td { background: var(--surface2); }
-  /* PAIN CELLS */
-  .pain-cell {
-    background: rgba(167,139,250,0.08) !important;
-    border-color: rgba(167,139,250,0.25) !important;
-  }
-  .pain-label {
-    color: #a78bfa !important;
-    font-weight: 600 !important;
-  }
-  .pain-cell a {
-    color: #a78bfa;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-  }
+  .pain-cell { background: rgba(167,139,250,0.08) !important; border-color: rgba(167,139,250,0.25) !important; }
+  .pain-cell a { color: #a78bfa; text-decoration: none; font-size: 11px; font-weight: 600; }
   .pain-cell a:hover { text-decoration: underline; }
-  .wip-badge {
-    display: inline-block;
-    font-size: 10px;
-    margin-left: 4px;
-    vertical-align: middle;
-    opacity: 0.85;
-  }
-
-  .row-sublabel {
-    padding-left: 28px !important;
-    color: var(--muted) !important;
-    font-size: 12px !important;
-    font-weight: 400 !important;
-    font-style: italic;
-  }
-  .comparativa-table tr.subrow td {
-    background: rgba(0,0,0,0.15);
-    border-top: none;
-  }
-
+  .wip-badge { display: inline-block; font-size: 10px; margin-left: 4px; vertical-align: middle; opacity: 0.85; }
+  .row-sublabel { padding-left: 28px !important; color: var(--muted) !important; font-size: 12px !important; font-weight: 400 !important; font-style: italic; }
+  .comparativa-table tr.subrow td { background: rgba(0,0,0,0.15); border-top: none; }
   .chip { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 13px; font-weight: 700; }
-  .chip.si   { color: var(--accent); }
-  .chip.no   { color: var(--accent4); }
-  .chip.dash { color: var(--muted); font-size: 13px; }
+  .chip.si  { color: var(--accent); }
+  .chip.no  { color: var(--accent4); }
+  .chip.dash{ color: var(--muted); font-size: 13px; }
   .chip.cautelar { background: rgba(245,158,11,0.12); color: var(--accent3); border: 1px solid rgba(245,158,11,0.25); font-size: 10px; font-weight: 600; }
-  .chip.rechazo  { background: rgba(239,68,68,0.12); color: var(--accent4); border: 1px solid rgba(239,68,68,0.25); font-size: 10px; font-weight: 600; }
-
-  .mono-small {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    color: var(--accent);
-    background: var(--surface2);
-    padding: 2px 6px;
-    border-radius: 4px;
-    display: inline-block;
-    line-height: 1.5;
-  }
-
-  .flow-text {
-    font-size: 11px;
-    color: #94a3b8;
-    white-space: nowrap;
-  }
+  .chip.rechazo  { background: rgba(239,68,68,0.12);  color: var(--accent4); border: 1px solid rgba(239,68,68,0.25); font-size: 10px; font-weight: 600; }
+  .mono-small { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--accent); background: var(--surface2); padding: 2px 6px; border-radius: 4px; display: inline-block; line-height: 1.5; }
+  .flow-text { font-size: 11px; color: #94a3b8; white-space: nowrap; }
   .flow-text .arr { color: var(--muted); margin: 0 2px; }
 
-  /* FOOTER */
-  .footer {
-    max-width: 1200px;
-    margin: 48px auto 0;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--muted);
+  /* ===================== RANKING ===================== */
+  .ranking-wrapper { max-width: 1200px; margin: 0 auto; animation: fadeUp 0.4s ease both; }
+
+  .ranking-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 900px) { .ranking-cards { grid-template-columns: repeat(3, 1fr); } }
+
+  .rk-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 14px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+    border-top: 4px solid transparent;
+  }
+  .rk-card:hover { transform: translateY(-3px); }
+  .rk-card.c-green  { border-top-color: #00e5a0; }
+  .rk-card.c-yellow { border-top-color: #60a5fa; }
+  .rk-card.c-red    { border-top-color: #94a3b8; }
+
+  .rk-site { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; letter-spacing: 0.04em; color: #e2e8f0; margin-bottom: 10px; }
+  .rk-nota { font-size: 3rem; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+  .rk-card.c-green  .rk-nota { color: #00e5a0; }
+  .rk-card.c-yellow .rk-nota { color: #60a5fa; }
+  .rk-card.c-red    .rk-nota { color: #94a3b8; }
+  .rk-score { font-size: 11px; color: var(--muted); }
+  .rk-pct { font-size: 13px; font-weight: 600; margin-top: 4px; }
+  .rk-card.c-green  .rk-pct { color: #00e5a0; }
+  .rk-card.c-yellow .rk-pct { color: #60a5fa; }
+  .rk-card.c-red    .rk-pct { color: #94a3b8; }
+  .rk-bar-wrap { background: var(--surface2); border-radius: 6px; height: 6px; margin-top: 8px; overflow: hidden; }
+  .rk-bar { height: 100%; border-radius: 6px; }
+  .c-green  .rk-bar { background: #00e5a0; }
+  .c-yellow .rk-bar { background: #60a5fa; }
+  .c-red    .rk-bar { background: #94a3b8; }
+
+  .rk-block { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .rk-block-title { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+
+  .hm-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .hm-table th { background: var(--surface2); font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; color: var(--accent); padding: 9px 12px; text-align: center; border: 1px solid var(--border); }
+  .hm-table th:first-child { text-align: left; width: 36%; }
+  .hm-table td { padding: 8px 12px; border: 1px solid var(--border); text-align: center; background: var(--surface); }
+  .hm-table td:first-child { text-align: left; color: var(--text); font-weight: 500; font-size: 13px; }
+  .hm-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .hm-table tr.total-row td { background: var(--surface2); font-weight: 700; }
+
+  .hm-cell { display: inline-block; min-width: 32px; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .hm-green  { background: rgba(0,229,160,0.12); color: #00e5a0; border: 1px solid rgba(0,229,160,0.25); }
+  .hm-yellow { background: rgba(245,158,11,0.12); color: #f59e0b; border: 1px solid rgba(245,158,11,0.25); }
+  .hm-red    { background: rgba(239,68,68,0.12);  color: #ef4444; border: 1px solid rgba(239,68,68,0.25); }
+  .hm-gray   { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+
+  .rk-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .rk-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+  .rk-legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+
+  .rk-collapsible {
+    cursor: pointer;
+    padding: 12px 16px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 6px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+    transition: border-color 0.15s, color 0.15s;
   }
+  .rk-collapsible:hover { border-color: var(--accent); color: var(--accent); }
+  .rk-collapsible .rk-arrow { transition: transform 0.2s; font-size: 10px; color: var(--muted); }
+  .rk-collapsible.open .rk-arrow { transform: rotate(90deg); }
+  .rk-coll-body { display: none; padding: 14px 16px; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; margin-top: -6px; margin-bottom: 6px; }
+  .rk-coll-body.open { display: block; }
+
+  .weakness-tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin: 3px; background: rgba(239,68,68,0.1); color: #ef4444; border: 1px solid rgba(239,68,68,0.2); }
+  .site-chip { display: inline-block; padding: 2px 10px; border-radius: 5px; font-size: 11px; font-weight: 700; color: #fff; margin-right: 8px; background: var(--accent2); font-family: 'IBM Plex Mono', monospace; }
+  .rk-note { font-size: 12px; line-height: 1.6; color: #64748b; margin-top: 10px; }
+
+  .brecha-bar-wrap { background: var(--surface2); border-radius: 4px; height: 8px; min-width: 80px; overflow: hidden; display: inline-block; width: 100%; }
+  .brecha-bar { height: 100%; border-radius: 4px; }
+  .brecha-green  { background: #00e5a0; }
+  .brecha-blue   { background: #60a5fa; }
+  .brecha-slate  { background: #64748b; }
+  .brecha-dim    { background: #475569; }
+
+  .opp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  @media (max-width: 700px) { .opp-grid { grid-template-columns: 1fr; } }
+  .opp-card { padding: 14px 16px; border-radius: 8px; border-left: 3px solid; font-size: 12px; line-height: 1.6; }
+  .opp-card.yellow { background: rgba(245,158,11,0.07); border-color: #f59e0b; }
+  .opp-card.red    { background: rgba(239,68,68,0.07);  border-color: #ef4444; }
+  .opp-title { font-weight: 600; margin-bottom: 5px; font-size: 13px; }
+  .opp-card.yellow .opp-title { color: #f59e0b; }
+  .opp-card.red    .opp-title { color: #ef4444; }
+  .opp-desc { color: #64748b; }
+
+  .feat-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .feat-table th { background: var(--surface2); font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; color: var(--accent); padding: 8px 12px; text-align: center; border: 1px solid var(--border); }
+  .feat-table th:first-child { text-align: left; width: 36%; }
+  .feat-table td { padding: 7px 12px; border: 1px solid var(--border); text-align: center; background: var(--surface); color: #94a3b8; }
+  .feat-table td:first-child { text-align: left; color: var(--text); font-weight: 500; }
+  .feat-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .feat-table tr.feat-total td { background: var(--surface2); font-weight: 700; }
+  .feat-check { color: #00e5a0; font-weight: 700; }
+  .feat-dash  { color: var(--muted); }
+
+  .footer { max-width: 1200px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   .footer a { color: var(--muted); text-decoration: underline; }
 </style>
 </head>
@@ -355,6 +315,7 @@
   <div class="tabs-nav">
     <button class="tab-btn active" onclick="switchTab('productos', this)">📦 Productos</button>
     <button class="tab-btn" onclick="switchTab('comparativa', this)">🔍 Comparativa</button>
+    <button class="tab-btn" onclick="switchTab('ranking', this)">🏆 Ranking</button>
   </div>
 </div>
 
@@ -392,35 +353,18 @@
         <div class="section">
           <div class="section-label">Tablas clave</div>
           <div class="tables-block">
-            <div class="table-item">
-              <div class="table-name">cvu_365dias_pagos_mtejera</div>
-              <div class="table-desc">Pagos (fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN)</div>
-            </div>
-            <div class="table-item">
-              <div class="table-name">cvu_365dias_base_total_mtejera</div>
-              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code> · incluye denuncias P2P</div>
-            </div>
-            <div class="table-item">
-              <div class="table-name">dashboard_cautelar_cvu_mla_mtejera</div>
-              <div class="table-desc">Dashboard del flujo cautelar</div>
-            </div>
+            <div class="table-item"><div class="table-name">cvu_365dias_pagos_mtejera</div><div class="table-desc">Pagos (fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN)</div></div>
+            <div class="table-item"><div class="table-name">cvu_365dias_base_total_mtejera</div><div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code> · incluye denuncias P2P</div></div>
+            <div class="table-item"><div class="table-name">dashboard_cautelar_cvu_mla_mtejera</div><div class="table-desc">Dashboard del flujo cautelar</div></div>
           </div>
         </div>
         <div class="section">
           <div class="section-label">Links de utilidad</div>
           <div class="links">
-            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1LwON14m_Jfq3UjvLm77ernCMBOmy9IaNsMP2eHbvOpw/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU ARS</span>
-            </a>
-            <a class="link-item" href="https://grid.adminml.com/d/01KVTYZH7JK5DVGYFAQDQ43CVF/view" target="_blank">
-              <span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CVU ARS</span>
-            </a>
-            <a class="link-item" href="https://docs.google.com/spreadsheets/d/12O1wHP2z3lhCMYQ73la0BenW8iDW8-ZjaaOVkmDE614/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📋</span><span class="link-text">Evolución denuncias CPF</span>
-            </a>
-            <a class="link-item" href="https://grid.adminml.com/d/01KTA3JXTM2CRV2GVN9GXB8N6G/view" target="_blank">
-              <span class="link-icon">📈</span><span class="link-text">Acreditaciones CVU</span>
-            </a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1LwON14m_Jfq3UjvLm77ernCMBOmy9IaNsMP2eHbvOpw/edit?usp=sharing" target="_blank"><span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU ARS</span></a>
+            <a class="link-item" href="https://grid.adminml.com/d/01KVTYZH7JK5DVGYFAQDQ43CVF/view" target="_blank"><span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CVU ARS</span></a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/12O1wHP2z3lhCMYQ73la0BenW8iDW8-ZjaaOVkmDE614/edit?usp=sharing" target="_blank"><span class="link-icon">📋</span><span class="link-text">Evolución denuncias CPF</span></a>
+            <a class="link-item" href="https://grid.adminml.com/d/01KTA3JXTM2CRV2GVN9GXB8N6G/view" target="_blank"><span class="link-icon">📈</span><span class="link-text">Acreditaciones CVU</span></a>
           </div>
         </div>
       </div>
@@ -454,22 +398,14 @@
         <div class="section">
           <div class="section-label">Tablas clave</div>
           <div class="tables-block">
-            <div class="table-item">
-              <div class="table-name">cvu_usd_365dias_pagos_mtejera</div>
-              <div class="table-desc">Pagos DOL/DCE · modelo: mf_mla_dol_default</div>
-            </div>
-            <div class="table-item">
-              <div class="table-name">cvu_usd_365dias_base_total_mtejera</div>
-              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code></div>
-            </div>
+            <div class="table-item"><div class="table-name">cvu_usd_365dias_pagos_mtejera</div><div class="table-desc">Pagos DOL/DCE · modelo: mf_mla_dol_default</div></div>
+            <div class="table-item"><div class="table-name">cvu_usd_365dias_base_total_mtejera</div><div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">cvu_sto</code></div></div>
           </div>
         </div>
         <div class="section">
           <div class="section-label">Links de utilidad</div>
           <div class="links">
-            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1caRl9RNrxhN8EwjBJXFNJrP392oj5NOxLByyx5Y_ZKQ/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU DOL/DCE</span>
-            </a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1caRl9RNrxhN8EwjBJXFNJrP392oj5NOxLByyx5Y_ZKQ/edit?usp=sharing" target="_blank"><span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CVU DOL/DCE</span></a>
           </div>
         </div>
       </div>
@@ -503,25 +439,15 @@
         <div class="section">
           <div class="section-label">Tablas clave</div>
           <div class="tables-block">
-            <div class="table-item">
-              <div class="table-name">clabe_365dias_pagos_mtejera</div>
-              <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlm_pix_default</div>
-            </div>
-            <div class="table-item">
-              <div class="table-name">clabe_365dias_base_total_mtejera</div>
-              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">clabe_sto</code> · incluye denuncias P2P</div>
-            </div>
+            <div class="table-item"><div class="table-name">clabe_365dias_pagos_mtejera</div><div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlm_pix_default</div></div>
+            <div class="table-item"><div class="table-name">clabe_365dias_base_total_mtejera</div><div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">clabe_sto</code> · incluye denuncias P2P</div></div>
           </div>
         </div>
         <div class="section">
           <div class="section-label">Links de utilidad</div>
           <div class="links">
-            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Z3ZGlpobCFUKrBdZOXXHlIduYjq42_U2suk6GMsIKyc/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CLABE</span>
-            </a>
-            <a class="link-item" href="https://script.google.com/a/macros/mercadolibre.com/s/AKfycbxqcALV2ubPsvs59xRMQpZ8Ht1Q0iLBX0wooxS6DwgfF5S8mvQ89A89uQGkmBNtelg8/exec" target="_blank">
-              <span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CLABE</span>
-            </a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Z3ZGlpobCFUKrBdZOXXHlIduYjq42_U2suk6GMsIKyc/edit?usp=sharing" target="_blank"><span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — CLABE</span></a>
+            <a class="link-item" href="https://script.google.com/a/macros/mercadolibre.com/s/AKfycbxqcALV2ubPsvs59xRMQpZ8Ht1Q0iLBX0wooxS6DwgfF5S8mvQ89A89uQGkmBNtelg8/exec" target="_blank"><span class="link-icon">📈</span><span class="link-text">Dashboard STO por banco — CLABE</span></a>
           </div>
         </div>
       </div>
@@ -547,39 +473,25 @@
         <div class="section">
           <div class="section-label">¿Cómo funciona?</div>
           <div class="section-text">
-            Transferencia electrónica de fondos en Chile (equivalente al débito inmediato). Hoy no se interpreta la respuesta de RISK → el pago se acredita siempre. El único mecanismo disponible es el <strong>bloqueo cautelar</strong>, con targets muy estrictos (eficiencia ~10%, fricción &lt; 10 cuentas/día).
+            Transferencia electrónica de fondos en Chile. Hoy no se interpreta la respuesta de RISK → el pago se acredita siempre. El único mecanismo disponible es el <strong>bloqueo cautelar</strong>, con targets muy estrictos (eficiencia ~10%, fricción &lt; 10 cuentas/día).
             <br><br>
-            Se está trabajando en habilitar rechazos: si Payments interpreta la respuesta de RISK, sería posible. Poroto cargado: <strong>SMPR-59886</strong>. Reuniones en curso con Payins, Payments y Banking Connections.
+            Se está trabajando en habilitar rechazos. Poroto cargado: <strong>SMPR-59886</strong>. Reuniones en curso con Payins, Payments y Banking Connections.
           </div>
         </div>
         <div class="section">
           <div class="section-label">Tablas clave</div>
           <div class="tables-block">
-            <div class="table-item">
-              <div class="table-name">tef_365dias_pagos_mtejera</div>
-              <div class="table-desc">Pagos TEF · fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN</div>
-            </div>
-            <div class="table-item">
-              <div class="table-name">tef_365dias_base_total_mtejera</div>
-              <div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">tef_sto</code></div>
-            </div>
+            <div class="table-item"><div class="table-name">tef_365dias_pagos_mtejera</div><div class="table-desc">Pagos TEF · fuente: BT_MP_PAY_PAYMENTS_NRT + BT_MP_PAY_PAYIN</div></div>
+            <div class="table-item"><div class="table-name">tef_365dias_base_total_mtejera</div><div class="table-desc">Tabla final · campo STO: <code style="font-family:monospace;font-size:10px;">tef_sto</code></div></div>
           </div>
         </div>
         <div class="section">
           <div class="section-label">Links de utilidad</div>
           <div class="links">
-            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Gp3sve0Kr1kvZQBW0v8wk6F_3cUQ2agObGAQfD8mknQ/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — TEF</span>
-            </a>
-            <a class="link-item" href="https://docs.google.com/document/d/1To6eCxomYHgGbvl1Fn0jcGoZDDD1kzlJDMzEZJtiycA/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📝</span><span class="link-text">Track habilitación de rechazos TEF</span>
-            </a>
-            <a class="link-item" href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank">
-              <span class="link-icon">🎫</span><span class="link-text">Poroto Jira — SMPR-59886</span>
-            </a>
-            <a class="link-item" href="https://grid.adminml.com/d/01KT7GYJSQ86FW7CT6QYZJKYAN/view" target="_blank">
-              <span class="link-icon">📋</span><span class="link-text">Plan de trabajo — TEF MLC</span>
-            </a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1Gp3sve0Kr1kvZQBW0v8wk6F_3cUQ2agObGAQfD8mknQ/edit?usp=sharing" target="_blank"><span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — TEF</span></a>
+            <a class="link-item" href="https://docs.google.com/document/d/1To6eCxomYHgGbvl1Fn0jcGoZDDD1kzlJDMzEZJtiycA/edit?usp=sharing" target="_blank"><span class="link-icon">📝</span><span class="link-text">Track habilitación de rechazos TEF</span></a>
+            <a class="link-item" href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/129/SMPR-59886" target="_blank"><span class="link-icon">🎫</span><span class="link-text">Poroto Jira — SMPR-59886</span></a>
+            <a class="link-item" href="https://grid.adminml.com/d/01KT7GYJSQ86FW7CT6QYZJKYAN/view" target="_blank"><span class="link-icon">📋</span><span class="link-text">Plan de trabajo — TEF MLC</span></a>
           </div>
         </div>
       </div>
@@ -613,28 +525,16 @@
         <div class="section">
           <div class="section-label">Tablas clave</div>
           <div class="tables-block">
-            <div class="table-item">
-              <div class="table-name">urutec_365dias_pagos_mtejera</div>
-              <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlu_tri_default · actualiz. incremental</div>
-            </div>
-            <div class="table-item">
-              <div class="table-name">urutec_365dias_base_total_mtejera</div>
-              <div class="table-desc">Tabla final · STO: SCALABILITY + sto_bq</div>
-            </div>
+            <div class="table-item"><div class="table-name">urutec_365dias_pagos_mtejera</div><div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYIN · modelo: pi_mlu_tri_default · actualiz. incremental</div></div>
+            <div class="table-item"><div class="table-name">urutec_365dias_base_total_mtejera</div><div class="table-desc">Tabla final · STO: SCALABILITY + sto_bq</div></div>
           </div>
         </div>
         <div class="section">
           <div class="section-label">Links de utilidad</div>
           <div class="links">
-            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1C8y4gYREYYzXDWi1xxfm0SUw-LgUIT6cIWNaMHc2TZQ/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — URUTEC</span>
-            </a>
-            <a class="link-item" href="https://grid.adminml.com/d/01KV6017RT553B6SSZ8RMMEENS/view" target="_blank">
-              <span class="link-icon">📊</span><span class="link-text">Reporte de métricas PACO — URUTEC</span>
-            </a>
-            <a class="link-item" href="https://grid.adminml.com/d/01KV89WDQS4TWJ5ZNSJC1TQG4E/view" target="_blank">
-              <span class="link-icon">📋</span><span class="link-text">Plan de trabajo — URUTEC MLU</span>
-            </a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1C8y4gYREYYzXDWi1xxfm0SUw-LgUIT6cIWNaMHc2TZQ/edit?usp=sharing" target="_blank"><span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — URUTEC</span></a>
+            <a class="link-item" href="https://grid.adminml.com/d/01KV6017RT553B6SSZ8RMMEENS/view" target="_blank"><span class="link-icon">📊</span><span class="link-text">Reporte de métricas PACO — URUTEC</span></a>
+            <a class="link-item" href="https://grid.adminml.com/d/01KV89WDQS4TWJ5ZNSJC1TQG4E/view" target="_blank"><span class="link-icon">📋</span><span class="link-text">Plan de trabajo — URUTEC MLU</span></a>
           </div>
         </div>
       </div>
@@ -669,25 +569,16 @@
         <div class="section">
           <div class="section-label">Tablas clave</div>
           <div class="tables-block">
-            <div class="table-item">
-              <div class="table-name">pse_365dias_pagos_mtejera</div>
-              <div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYMENTS_NRT · filtro: PAY_PAYMENT_METHOD_ID='pse'</div>
-            </div>
+            <div class="table-item"><div class="table-name">pse_365dias_pagos_mtejera</div><div class="table-desc">Pagos · fuente: BT_MP_PAY_PAYMENTS_NRT · filtro: PAY_PAYMENT_METHOD_ID='pse'</div></div>
           </div>
           <div class="note warn">⚠ Sin tabla final ni marca STO disponible aún para PSE.</div>
         </div>
         <div class="section">
           <div class="section-label">Links de utilidad</div>
           <div class="links">
-            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1_eoeXvzSv1dTk5cJLu2WqQLnx5mHuU9OcgwFTEmeTvc/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — PSE</span>
-            </a>
-            <a class="link-item" href="https://docs.google.com/document/d/1K040aVHNR2ofgMzGVdLxoG2wsL1ZHy7ZZQFkiDVtoqg/edit?usp=sharing" target="_blank">
-              <span class="link-icon">📝</span><span class="link-text">Paso a paso PSE - Mercado Pago</span>
-            </a>
-            <a class="link-item" href="https://grid.adminml.com/d/01KVBM56639PT8KJ0HDN5K2RHB/view" target="_blank">
-              <span class="link-icon">📋</span><span class="link-text">Plan de trabajo — PSE MCO</span>
-            </a>
+            <a class="link-item" href="https://docs.google.com/spreadsheets/d/1_eoeXvzSv1dTk5cJLu2WqQLnx5mHuU9OcgwFTEmeTvc/edit?usp=sharing" target="_blank"><span class="link-icon">📊</span><span class="link-text">Reporte diario de monitoreo — PSE</span></a>
+            <a class="link-item" href="https://docs.google.com/document/d/1K040aVHNR2ofgMzGVdLxoG2wsL1ZHy7ZZQFkiDVtoqg/edit?usp=sharing" target="_blank"><span class="link-icon">📝</span><span class="link-text">Paso a paso PSE - Mercado Pago</span></a>
+            <a class="link-item" href="https://grid.adminml.com/d/01KVBM56639PT8KJ0HDN5K2RHB/view" target="_blank"><span class="link-icon">📋</span><span class="link-text">Plan de trabajo — PSE MCO</span></a>
           </div>
         </div>
       </div>
@@ -712,51 +603,24 @@
         </tr>
       </thead>
       <tbody>
-
-        <!-- VOLUMEN -->
-        <tr class="group-header">
-          <td colspan="7">📊 Volumen promedio mensual (ene–may 2026)</td>
-        </tr>
+        <tr class="group-header"><td colspan="7">📊 Volumen promedio mensual (ene–may 2026)</td></tr>
         <tr>
           <td class="row-label">TPN</td>
-          <td style="font-size:12px;color:#94a3b8;">252M</td>
-          <td style="font-size:12px;color:#94a3b8;">15,3M</td>
-          <td style="font-size:12px;color:#94a3b8;">296K</td>
-          <td style="font-size:12px;color:#94a3b8;">15,3M</td>
-          <td style="font-size:12px;color:#94a3b8;">87K</td>
-          <td style="font-size:12px;color:#94a3b8;">12K</td>
+          <td style="font-size:12px;color:#94a3b8;">252M</td><td style="font-size:12px;color:#94a3b8;">15,3M</td><td style="font-size:12px;color:#94a3b8;">296K</td><td style="font-size:12px;color:#94a3b8;">15,3M</td><td style="font-size:12px;color:#94a3b8;">87K</td><td style="font-size:12px;color:#94a3b8;">12K</td>
         </tr>
         <tr>
           <td class="row-label">TPV (USD)</td>
-          <td style="font-size:12px;color:#94a3b8;">$9.583M</td>
-          <td style="font-size:12px;color:#94a3b8;">$1.312M</td>
-          <td style="font-size:12px;color:#94a3b8;">$179M</td>
-          <td style="font-size:12px;color:#94a3b8;">$1.312M</td>
-          <td style="font-size:12px;color:#94a3b8;">$5M</td>
-          <td style="font-size:12px;color:#94a3b8;">$0,6M</td>
-        </tr>
-         <tr>
-          <td class="row-label">Ratio STO (TPV) prom. ene–may 2026</td>
-          <td style="font-size:12px;color:#94a3b8;">0,003%</td>
-          <td style="font-size:12px;color:#94a3b8;">0,011%</td>
-          <td style="font-size:12px;color:#94a3b8;">0,001%</td>
-          <td style="font-size:12px;color:#94a3b8;">0,020%</td>
-          <td style="font-size:12px;color:#94a3b8;">0,305%</td>
-          <td><span class="chip dash">—</span></td>
-        </tr>
-
-        <!-- GENERAL -->
-        <tr class="group-header">
-          <td colspan="7">⚙ General</td>
+          <td style="font-size:12px;color:#94a3b8;">$9.583M</td><td style="font-size:12px;color:#94a3b8;">$1.312M</td><td style="font-size:12px;color:#94a3b8;">$179M</td><td style="font-size:12px;color:#94a3b8;">$1.312M</td><td style="font-size:12px;color:#94a3b8;">$5M</td><td style="font-size:12px;color:#94a3b8;">$0,6M</td>
         </tr>
         <tr>
+          <td class="row-label">Ratio STO (TPV) prom. ene–may 2026</td>
+          <td style="font-size:12px;color:#94a3b8;">0,003%</td><td style="font-size:12px;color:#94a3b8;">0,011%</td><td style="font-size:12px;color:#94a3b8;">0,001%</td><td style="font-size:12px;color:#94a3b8;">0,020%</td><td style="font-size:12px;color:#94a3b8;">0,305%</td><td><span class="chip dash">—</span></td>
+        </tr>
+
+        <tr class="group-header"><td colspan="7">⚙ General</td></tr>
+        <tr>
           <td class="row-label">Prediction</td>
-          <td><span class="mono-small">mf_mla_tri_default</span></td>
-          <td><span class="mono-small">pi_mlm_pix_default</span></td>
-          <td><span class="mono-small">mf_mla_dol_default</span></td>
-          <td><span class="mono-small">mf_mlc_tri_default</span></td>
-          <td><span class="mono-small">pi_mlu_tri_default</span></td>
-          <td><span class="mono-small">mf_mlc_tri_default</span></td>
+          <td><span class="mono-small">mf_mla_tri_default</span></td><td><span class="mono-small">pi_mlm_pix_default</span></td><td><span class="mono-small">mf_mla_dol_default</span></td><td><span class="mono-small">mf_mlc_tri_default</span></td><td><span class="mono-small">pi_mlu_tri_default</span></td><td><span class="mono-small">mf_mlc_tri_default</span></td>
         </tr>
         <tr>
           <td class="row-label">Flujo de llamados</td>
@@ -769,12 +633,7 @@
         </tr>
         <tr>
           <td class="row-label">Se interpreta respuesta de RISK</td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
+          <td><span class="chip no">✗</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td>
         </tr>
         <tr>
           <td class="row-label">¿Podemos rechazar?</td>
@@ -787,153 +646,330 @@
         </tr>
         <tr class="subrow">
           <td class="row-label row-sublabel">↳ Motivo</td>
-          <td style="font-size:12px;color:#94a3b8;">Integración COELSA</td>
-          <td><span class="chip dash">—</span></td>
-          <td><span class="chip dash">—</span></td>
-          <td style="font-size:12px;color:#94a3b8;">Infra MP</td>
-          <td><span class="chip dash">—</span></td>
-          <td style="font-size:12px;color:#94a3b8;">?</td>
+          <td style="font-size:12px;color:#94a3b8;">Integración COELSA</td><td><span class="chip dash">—</span></td><td><span class="chip dash">—</span></td><td style="font-size:12px;color:#94a3b8;">Infra MP</td><td><span class="chip dash">—</span></td><td style="font-size:12px;color:#94a3b8;">?</td>
         </tr>
         <tr>
           <td class="row-label">Marca de fraude STO</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td>
           <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Proceso simil legitimidade con Repa</td>
         </tr>
         <tr>
           <td class="row-label">Info de titularidad</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
+          <td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td>
           <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Conversación con URUTEC + Feature PROXY</td>
           <td class="pain-cell" style="font-size:11px;color:#a78bfa;"><span class="wip-badge">⏳</span> Solicitud ACH</td>
         </tr>
         <tr>
           <td class="row-label">Medida desde el score</td>
-          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
-          <td><span class="chip rechazo">Rechazo</span></td>
-          <td><span class="chip rechazo">Rechazo</span></td>
-          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
-          <td><span class="chip rechazo">Rechazo</span></td>
-          <td><span class="chip cautelar">Bloqueo Cautelar</span></td>
+          <td><span class="chip cautelar">Bloqueo Cautelar</span></td><td><span class="chip rechazo">Rechazo</span></td><td><span class="chip rechazo">Rechazo</span></td><td><span class="chip cautelar">Bloqueo Cautelar</span></td><td><span class="chip rechazo">Rechazo</span></td><td><span class="chip cautelar">Bloqueo Cautelar</span></td>
         </tr>
-
         <tr>
           <td class="row-label">Gestión de casos</td>
-          <td style="font-size:12px;color:#94a3b8;">Rep de Riesgo Receiver</td>
-          <td><span class="chip dash">—</span></td>
-          <td><span class="chip dash">—</span></td>
-          <td style="font-size:12px;color:#94a3b8;">Rep de Riesgo Receiver</td>
-          <td style="font-size:12px;color:#94a3b8;">PACO</td>
-          <td><span class="chip dash">—</span></td>
+          <td style="font-size:12px;color:#94a3b8;">Rep de Riesgo Receiver</td><td><span class="chip dash">—</span></td><td><span class="chip dash">—</span></td><td style="font-size:12px;color:#94a3b8;">Rep de Riesgo Receiver</td><td style="font-size:12px;color:#94a3b8;">PACO</td><td><span class="chip dash">—</span></td>
         </tr>
 
-        <!-- REGLAS DE PREVENCIÓN -->
-        <tr class="group-header">
-          <td colspan="7">🛡 Reglas de Prevención</td>
-        </tr>
-        <tr>
-          <td class="row-label">Titularidad</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Contención usuarios nuevos</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Cambio de comportamiento</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip si">✓</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Denuncias previas</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Velocity</td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Cruces riesgosos</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Saldo en la cuenta</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip no">✗</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip no">✗</span></td>
-        </tr>
+        <tr class="group-header"><td colspan="7">🛡 Reglas de Prevención</td></tr>
+        <tr><td class="row-label">Titularidad</td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td></tr>
+        <tr><td class="row-label">Contención usuarios nuevos</td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td></tr>
+        <tr><td class="row-label">Cambio de comportamiento</td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td><td><span class="chip si">✓</span></td></tr>
+        <tr><td class="row-label">Denuncias previas</td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td></tr>
+        <tr><td class="row-label">Velocity</td><td><span class="chip no">✗</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td></tr>
+        <tr><td class="row-label">Cruces riesgosos</td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td></tr>
+        <tr><td class="row-label">Saldo en la cuenta</td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td><td><span class="chip no">✗</span></td><td><span class="chip si">✓</span></td><td><span class="chip no">✗</span></td></tr>
 
-        <!-- ALARMAS -->
-        <tr class="group-header">
-          <td colspan="7">🚨 Alarmas</td>
-        </tr>
-        <tr>
-          <td class="row-label">Aumento incoming STO</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip dash">—</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Caída en aprobación / incremento BC</td>
-          <td><span class="chip dash">—</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip dash">—</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip dash">—</span></td>
-        </tr>
-        <tr>
-          <td class="row-label">Aumento incoming TPN, TPV o MAFs</td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-          <td><span class="chip si">✓</span></td>
-        </tr>
-
+        <tr class="group-header"><td colspan="7">🚨 Alarmas</td></tr>
+        <tr><td class="row-label">Aumento incoming STO</td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip dash">—</span></td></tr>
+        <tr><td class="row-label">Caída en aprobación / incremento BC</td><td><span class="chip dash">—</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip dash">—</span></td><td><span class="chip si">✓</span></td><td><span class="chip dash">—</span></td></tr>
+        <tr><td class="row-label">Aumento incoming TPN, TPV o MAFs</td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td><td><span class="chip si">✓</span></td></tr>
       </tbody>
     </table>
+  </div>
+</div>
+
+<!-- TAB: RANKING -->
+<div id="tab-ranking" class="tab-panel">
+  <div class="ranking-wrapper">
+
+    <!-- Site score cards -->
+    <div class="ranking-cards">
+      <div class="rk-card c-yellow">
+        <div class="rk-site">MLA</div>
+        <div class="rk-nota">5</div>
+        <div class="rk-score">26 / 49 pts</div>
+        <div class="rk-pct">53%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:53%"></div></div>
+      </div>
+      <div class="rk-card c-yellow">
+        <div class="rk-site">MLM</div>
+        <div class="rk-nota">5</div>
+        <div class="rk-score">26 / 49 pts</div>
+        <div class="rk-pct">53%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:53%"></div></div>
+      </div>
+      <div class="rk-card c-yellow">
+        <div class="rk-site">MLC</div>
+        <div class="rk-nota">5</div>
+        <div class="rk-score">26 / 49 pts</div>
+        <div class="rk-pct">52%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:52%"></div></div>
+      </div>
+      <div class="rk-card c-red">
+        <div class="rk-site">MLA DOL</div>
+        <div class="rk-nota">4</div>
+        <div class="rk-score">19 / 49 pts</div>
+        <div class="rk-pct">38%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:38%"></div></div>
+      </div>
+      <div class="rk-card c-red">
+        <div class="rk-site">MLU</div>
+        <div class="rk-nota">4</div>
+        <div class="rk-score">20 / 49 pts</div>
+        <div class="rk-pct">39%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:39%"></div></div>
+      </div>
+      <div class="rk-card c-red">
+        <div class="rk-site">MCO</div>
+        <div class="rk-nota">0</div>
+        <div class="rk-score">2 / 49 pts</div>
+        <div class="rk-pct">3%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:3%"></div></div>
+      </div>
+    </div>
+
+    <!-- Heatmap -->
+    <div class="rk-block">
+      <div class="rk-block-title">🔥 Heatmap de cobertura por categoría</div>
+      <div class="rk-legend">
+        <div class="rk-legend-item"><div class="rk-legend-dot" style="background:rgba(0,229,160,0.3)"></div> 5 pts — Completo</div>
+        <div class="rk-legend-item"><div class="rk-legend-dot" style="background:rgba(245,158,11,0.35)"></div> 2–4 pts — Parcial</div>
+        <div class="rk-legend-item"><div class="rk-legend-dot" style="background:rgba(239,68,68,0.3)"></div> 1 pt — Mínimo</div>
+        <div class="rk-legend-item"><div class="rk-legend-dot" style="background:rgba(100,116,139,0.3)"></div> 0 pts — Sin cobertura</div>
+      </div>
+      <table class="hm-table">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>MLA</th><th>MLM</th><th>MLC</th><th>MLA DOL</th><th>MLU</th><th>MCO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Rechazar</td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-gray">0</span></td></tr>
+          <tr><td>Marca de fraude</td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-red">1</span></td></tr>
+          <tr><td>Marca de STO sólida</td><td><span class="hm-cell hm-yellow">2</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-yellow">2</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-gray">0</span></td></tr>
+          <tr><td>Titularidad</td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td></tr>
+          <tr><td>Reglas de prevención STO</td><td><span class="hm-cell hm-yellow">4</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-yellow">2</span></td><td><span class="hm-cell hm-yellow">2</span></td><td><span class="hm-cell hm-red">1</span></td></tr>
+          <tr>
+            <td style="color:var(--muted);font-style:italic;">Experiencia del usuario / fricción</td>
+            <td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td>
+          </tr>
+          <tr><td>Modelo MaLe (STO)</td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td></tr>
+          <tr><td>Reglas de prevención ITO</td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-yellow">2</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td></tr>
+          <tr><td>Reglas ataques bancarios</td><td><span class="hm-cell hm-yellow">2</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td></tr>
+          <tr><td>Casos revisión manual (RR)</td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td><td><span class="hm-cell hm-gray">0</span></td></tr>
+          <tr><td>Alarmas</td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-yellow">2</span></td></tr>
+          <tr class="total-row">
+            <td>TOTAL</td>
+            <td><span class="hm-cell hm-yellow">26</span></td><td><span class="hm-cell hm-yellow">26</span></td><td><span class="hm-cell hm-yellow">26</span></td><td><span class="hm-cell hm-red">19</span></td><td><span class="hm-cell hm-red">20</span></td><td><span class="hm-cell hm-red">2</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Debilidades -->
+    <div class="rk-block">
+      <div class="rk-block-title">⚠️ Debilidades por site</div>
+
+      <div class="rk-collapsible"><span><span class="site-chip">MLA</span> Argentina · Nota 5 · 26/49 pts · 53%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-coll-body">
+        <span class="weakness-tag">❌ Sin rechazo técnico</span>
+        <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
+        <span class="weakness-tag">❌ Sin reglas ITO</span>
+        <span class="weakness-tag">⚠️ STO sólida parcial (2/5)</span>
+        <span class="weakness-tag">⚠️ Alarmas parciales (3/5)</span>
+        <p class="rk-note">MLA tiene el mejor perfil (modelo MaLe, reglas bancarias, RR) pero no puede rechazar en técnica. ITO y fricción sin cobertura.</p>
+      </div>
+
+      <div class="rk-collapsible"><span><span class="site-chip">MLM</span> México · Nota 5 · 26/49 pts · 53%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-coll-body">
+        <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
+        <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
+        <span class="weakness-tag">❌ Sin reglas ITO</span>
+        <span class="weakness-tag">❌ Sin revisión manual (RR)</span>
+        <span class="weakness-tag">❌ Sin reglas ataques bancarios</span>
+        <span class="weakness-tag">⚠️ STO sólida parcial (3/5)</span>
+        <p class="rk-note">Tiene rechazo técnico y alarmas completas, pero le falta toda la capa de detección avanzada (ML, ITO, RR).</p>
+      </div>
+
+      <div class="rk-collapsible"><span><span class="site-chip">MLC</span> Chile · Nota 5 · 26/49 pts · 52%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-coll-body">
+        <span class="weakness-tag">❌ Sin rechazo técnico</span>
+        <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
+        <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
+        <span class="weakness-tag">❌ Sin reglas ataques bancarios</span>
+        <span class="weakness-tag">⚠️ STO sólida parcial (3/5)</span>
+        <p class="rk-note">Único site con reglas ITO. Tiene alarmas completas y revisión manual (RR). Sin embargo, opera en modo cautelar y sin ML.</p>
+      </div>
+
+      <div class="rk-collapsible"><span><span class="site-chip">MLA DOL</span> Argentina USD · Nota 4 · 19/49 pts · 38%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-coll-body">
+        <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
+        <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
+        <span class="weakness-tag">❌ Sin reglas ITO</span>
+        <span class="weakness-tag">❌ Sin reglas ataques bancarios</span>
+        <span class="weakness-tag">❌ Sin revisión manual (RR)</span>
+        <span class="weakness-tag">⚠️ STO sólida parcial (2/5)</span>
+        <span class="weakness-tag">⚠️ Alarmas parciales (3/5)</span>
+        <p class="rk-note">Tiene rechazo técnico y titularidad, pero falta toda la capa analítica avanzada. Score más bajo del bloque ARS/MXN/CLP.</p>
+      </div>
+
+      <div class="rk-collapsible"><span><span class="site-chip">MLU</span> Uruguay · Nota 4 · 20/49 pts · 39%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-coll-body">
+        <span class="weakness-tag">❌ Sin titularidad</span>
+        <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
+        <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
+        <span class="weakness-tag">❌ Sin reglas ITO</span>
+        <span class="weakness-tag">❌ Sin reglas ataques bancarios</span>
+        <span class="weakness-tag">❌ Sin revisión manual (RR)</span>
+        <span class="weakness-tag">⚠️ STO sólida parcial (3/5)</span>
+        <p class="rk-note">Tiene rechazo técnico y alarmas completas, pero falta titularidad (señal clave de STO) y toda la capa avanzada.</p>
+      </div>
+
+      <div class="rk-collapsible"><span><span class="site-chip" style="background:#ef4444;">MCO</span> Colombia · Nota 0 · 2/49 pts · 3%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-coll-body">
+        <span class="weakness-tag">❌ Sin rechazo</span>
+        <span class="weakness-tag">❌ Sin titularidad</span>
+        <span class="weakness-tag">❌ Sin modelo ML</span>
+        <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
+        <span class="weakness-tag">❌ Sin reglas STO / ITO / bancarios</span>
+        <span class="weakness-tag">❌ Sin revisión manual</span>
+        <span class="weakness-tag">⚠️ Marca de fraude mínima (1/5)</span>
+        <span class="weakness-tag">⚠️ Alarmas básicas (2/5)</span>
+        <p class="rk-note"><strong style="color:#ef4444;">Site crítico.</strong> Solo 3% de cobertura vs el ideal. Prácticamente sin herramientas de detección ni acción.</p>
+      </div>
+    </div>
+
+    <!-- Brecha al excelente -->
+    <div class="rk-block">
+      <div class="rk-block-title">📈 Brecha al "Excelente" (49 puntos)</div>
+      <table class="hm-table">
+        <thead>
+          <tr>
+            <th style="width:8%">Site</th>
+            <th style="width:8%">Score</th>
+            <th style="width:8%">Nota</th>
+            <th style="width:8%">%</th>
+            <th style="width:10%">Progreso</th>
+            <th style="width:58%;text-align:left;padding-left:12px;">Principales faltantes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#60a5fa;">MLA</td>
+            <td><span class="hm-cell hm-yellow">26</span></td>
+            <td><span class="hm-cell hm-yellow">5</span></td>
+            <td style="color:#60a5fa;font-weight:600;">53%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:53%;background:#60a5fa;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Habilitar rechazo técnico (COELSA) · Sin reglas ITO · Alarmas al 60% · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#60a5fa;">MLM</td>
+            <td><span class="hm-cell hm-yellow">26</span></td>
+            <td><span class="hm-cell hm-yellow">5</span></td>
+            <td style="color:#60a5fa;font-weight:600;">53%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:53%;background:#60a5fa;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin modelo ML (MaLe) · Sin revisión manual (RR) · Sin reglas ITO ni ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#60a5fa;">MLC</td>
+            <td><span class="hm-cell hm-yellow">26</span></td>
+            <td><span class="hm-cell hm-yellow">5</span></td>
+            <td style="color:#60a5fa;font-weight:600;">52%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:52%;background:#60a5fa;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Habilitar rechazo técnico (SMPR-59886) · Sin modelo ML (MaLe) · Sin reglas ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#94a3b8;">MLU</td>
+            <td><span class="hm-cell hm-gray">20</span></td>
+            <td><span class="hm-cell hm-gray">4</span></td>
+            <td style="color:#94a3b8;font-weight:600;">39%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:39%;background:#64748b;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin titularidad · Sin modelo ML (MaLe) · Sin RR · Sin ITO · Sin reglas ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#94a3b8;">MLA DOL</td>
+            <td><span class="hm-cell hm-gray">19</span></td>
+            <td><span class="hm-cell hm-gray">4</span></td>
+            <td style="color:#94a3b8;font-weight:600;">38%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:38%;background:#64748b;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin modelo ML (MaLe) · Sin RR · Sin ITO · Sin reglas ataques bancarios · Alarmas al 60% · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#64748b;">MCO</td>
+            <td><span class="hm-cell hm-gray">2</span></td>
+            <td><span class="hm-cell hm-gray">0</span></td>
+            <td style="color:#64748b;font-weight:600;">3%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:3%;background:#475569;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin rechazo · Sin titularidad · Sin modelo ML · Sin RR · Sin ITO · Sin ataques bancarios · Marca de fraude mínima · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;">La columna <strong>Nota</strong> expresa la maduración del producto en escala 0–10 en función del % alcanzado vs el Excelente.</p>
+
+      <div class="opp-grid">
+        <div class="opp-card yellow">
+          <div class="opp-title">🤖 Modelo MaLe (STO)</div>
+          <div class="opp-desc">Solo disponible en MLA. Extenderlo al resto de los sites es la oportunidad de mayor impacto.</div>
+        </div>
+        <div class="opp-card yellow">
+          <div class="opp-title">🔒 Capacidad de rechazo</div>
+          <div class="opp-desc">MLA, MLC y MCO operan con bloqueo cautelar. Habilitar rechazo técnico en cada uno.</div>
+        </div>
+        <div class="opp-card yellow">
+          <div class="opp-title">🧪 Experiencia del usuario / Fricción</div>
+          <div class="opp-desc">¿Qué tan involucrados estamos con Producto para entender la experiencia cuando rechazamos o aplicamos BC? Sin cobertura en ningún site.</div>
+        </div>
+        <div class="opp-card red">
+          <div class="opp-title">🇨🇴 MCO — Cobertura urgente</div>
+          <div class="opp-desc">Casi sin herramientas (2/49 pts).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metodología features STO -->
+    <div class="rk-block">
+      <div class="rk-block-title">📋 Metodología — Features usados en reglas de prevención STO</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:16px;">Detalle de qué features de detección están presentes en las reglas de prevención de STO por site. Este breakdown explica el puntaje de la fila "Reglas de prevención de STO" del heatmap.</p>
+      <table class="feat-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>MLA</th><th>MLM</th><th>MLC</th><th>MLA DOL</th><th>MLU</th><th>MCO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Doc conocido</td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr><td>Acumulados / cambio de comportamiento</td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-check">✓</span></td></tr>
+          <tr><td>Denuncias previas</td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr><td>Velocity</td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr><td>Cruces riesgosos</td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr><td>Saldo en cuenta</td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr><td>Device</td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr><td>Infraction tags sender</td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr><td>Contención usuarios nuevos</td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-check">✓</span></td><td><span class="feat-dash">—</span></td></tr>
+          <tr class="feat-total">
+            <td>Cobertura de features</td>
+            <td style="color:#00e5a0;font-weight:700;font-family:'IBM Plex Mono',monospace;">89%</td>
+            <td style="color:#f59e0b;font-weight:700;font-family:'IBM Plex Mono',monospace;">67%</td>
+            <td style="color:#f59e0b;font-weight:700;font-family:'IBM Plex Mono',monospace;">56%</td>
+            <td style="color:#f59e0b;font-weight:700;font-family:'IBM Plex Mono',monospace;">44%</td>
+            <td style="color:#ef4444;font-weight:700;font-family:'IBM Plex Mono',monospace;">33%</td>
+            <td style="color:#ef4444;font-weight:700;font-family:'IBM Plex Mono',monospace;">11%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px;font-size:11px;color:var(--muted);">✓ = feature presente en al menos una regla activa del site &nbsp;·&nbsp; — = sin cobertura</p>
+    </div>
+
   </div>
 </div>
 
@@ -944,6 +980,13 @@
     document.getElementById('tab-' + name).classList.add('active');
     btn.classList.add('active');
   }
+
+  document.querySelectorAll('.rk-collapsible').forEach(el => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('open');
+      el.nextElementSibling.classList.toggle('open');
+    });
+  });
 </script>
 
 </body>
