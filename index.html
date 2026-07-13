@@ -298,6 +298,9 @@
 
   .footer { max-width: 1200px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   .footer a { color: var(--muted); text-decoration: underline; }
+
+  .rk-snapshot-label { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; margin-top: 4px; padding: 8px 14px; background: var(--surface2); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; display: inline-block; }
+  .hm-delta { background: rgba(0,229,160,0.12); color: #00e5a0; border: 1px solid rgba(0,229,160,0.25); }
 </style>
 </head>
 <body>
@@ -698,53 +701,54 @@
 <div id="tab-ranking" class="tab-panel">
   <div class="ranking-wrapper">
 
-    <!-- Site score cards -->
+    <!-- Estado actual: Julio 2026 -->
+    <div class="rk-snapshot-label">📅 Estado actual — Julio 2026</div>
     <div class="ranking-cards">
       <div class="rk-card c-yellow">
         <div class="rk-site">MLA</div>
-        <div class="rk-nota">5</div>
-        <div class="rk-score">26 / 49 pts</div>
+        <div class="rk-nota">5.3</div>
+        <div class="rk-score">29 / 55 pts</div>
         <div class="rk-pct">53%</div>
         <div class="rk-bar-wrap"><div class="rk-bar" style="width:53%"></div></div>
       </div>
       <div class="rk-card c-yellow">
         <div class="rk-site">MLM</div>
-        <div class="rk-nota">5</div>
-        <div class="rk-score">26 / 49 pts</div>
-        <div class="rk-pct">53%</div>
-        <div class="rk-bar-wrap"><div class="rk-bar" style="width:53%"></div></div>
+        <div class="rk-nota">4.7</div>
+        <div class="rk-score">26 / 55 pts</div>
+        <div class="rk-pct">47%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:47%"></div></div>
       </div>
       <div class="rk-card c-yellow">
         <div class="rk-site">MLC</div>
-        <div class="rk-nota">5</div>
-        <div class="rk-score">26 / 49 pts</div>
-        <div class="rk-pct">52%</div>
-        <div class="rk-bar-wrap"><div class="rk-bar" style="width:52%"></div></div>
+        <div class="rk-nota">5.1</div>
+        <div class="rk-score">28 / 55 pts</div>
+        <div class="rk-pct">51%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:51%"></div></div>
       </div>
-      <div class="rk-card c-red">
+      <div class="rk-card c-yellow">
         <div class="rk-site">MLA DOL</div>
-        <div class="rk-nota">4</div>
-        <div class="rk-score">19 / 49 pts</div>
-        <div class="rk-pct">38%</div>
-        <div class="rk-bar-wrap"><div class="rk-bar" style="width:38%"></div></div>
+        <div class="rk-nota">4.0</div>
+        <div class="rk-score">22 / 55 pts</div>
+        <div class="rk-pct">40%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:40%"></div></div>
       </div>
       <div class="rk-card c-red">
         <div class="rk-site">MLU</div>
-        <div class="rk-nota">4</div>
-        <div class="rk-score">20 / 49 pts</div>
-        <div class="rk-pct">39%</div>
-        <div class="rk-bar-wrap"><div class="rk-bar" style="width:39%"></div></div>
+        <div class="rk-nota">3.6</div>
+        <div class="rk-score">20 / 55 pts</div>
+        <div class="rk-pct">36%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:36%"></div></div>
       </div>
       <div class="rk-card c-red">
         <div class="rk-site">MCO</div>
-        <div class="rk-nota">0</div>
-        <div class="rk-score">2 / 49 pts</div>
-        <div class="rk-pct">3%</div>
-        <div class="rk-bar-wrap"><div class="rk-bar" style="width:3%"></div></div>
+        <div class="rk-nota">0.7</div>
+        <div class="rk-score">4 / 55 pts</div>
+        <div class="rk-pct">7%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:7%"></div></div>
       </div>
     </div>
 
-    <!-- Heatmap -->
+    <!-- Heatmap estado actual -->
     <div class="rk-block">
       <div class="rk-block-title">🔥 Heatmap de cobertura por categoría</div>
       <div class="rk-legend">
@@ -777,7 +781,142 @@
           <tr><td>Alarmas</td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-yellow">3</span></td><td><span class="hm-cell hm-green">5</span></td><td><span class="hm-cell hm-yellow">2</span></td></tr>
           <tr class="total-row">
             <td>TOTAL</td>
-            <td><span class="hm-cell hm-yellow">26</span></td><td><span class="hm-cell hm-yellow">26</span></td><td><span class="hm-cell hm-yellow">26</span></td><td><span class="hm-cell hm-red">19</span></td><td><span class="hm-cell hm-red">20</span></td><td><span class="hm-cell hm-red">2</span></td>
+            <td><span class="hm-cell hm-yellow">29</span></td><td><span class="hm-cell hm-yellow">26</span></td><td><span class="hm-cell hm-yellow">28</span></td><td><span class="hm-cell hm-yellow">22</span></td><td><span class="hm-cell hm-red">20</span></td><td><span class="hm-cell hm-red">4</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Objetivo: Diciembre 2026 -->
+    <div class="rk-snapshot-label">🎯 Objetivo — Diciembre 2026</div>
+    <div class="ranking-cards" style="margin-bottom:28px;">
+      <div class="rk-card c-yellow">
+        <div class="rk-site">MLA</div>
+        <div class="rk-nota">6.0</div>
+        <div class="rk-score">33 / 55 pts</div>
+        <div class="rk-pct">60%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:60%"></div></div>
+      </div>
+      <div class="rk-card c-yellow">
+        <div class="rk-site">MLM</div>
+        <div class="rk-nota">6.2</div>
+        <div class="rk-score">34 / 55 pts</div>
+        <div class="rk-pct">62%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:62%"></div></div>
+      </div>
+      <div class="rk-card c-green">
+        <div class="rk-site">MLC</div>
+        <div class="rk-nota">7.1</div>
+        <div class="rk-score">39 / 55 pts</div>
+        <div class="rk-pct">71%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:71%"></div></div>
+      </div>
+      <div class="rk-card c-yellow">
+        <div class="rk-site">MLA DOL</div>
+        <div class="rk-nota">4.7</div>
+        <div class="rk-score">26 / 55 pts</div>
+        <div class="rk-pct">47%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:47%"></div></div>
+      </div>
+      <div class="rk-card c-yellow">
+        <div class="rk-site">MLU</div>
+        <div class="rk-nota">4.2</div>
+        <div class="rk-score">23 / 55 pts</div>
+        <div class="rk-pct">42%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:42%"></div></div>
+      </div>
+      <div class="rk-card c-red">
+        <div class="rk-site">MCO</div>
+        <div class="rk-nota">1.1</div>
+        <div class="rk-score">6 / 55 pts</div>
+        <div class="rk-pct">11%</div>
+        <div class="rk-bar-wrap"><div class="rk-bar" style="width:11%"></div></div>
+      </div>
+    </div>
+
+    <!-- Principales cambios H2 -->
+    <div class="rk-block">
+      <div class="rk-block-title">📈 Principales cambios H2 2026</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:16px;">Delta de puntos por categoría respecto al estado actual de julio 2026. Solo se muestran filas con al menos un cambio.</p>
+      <table class="hm-table">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>MLA</th><th>MLM</th><th>MLC</th><th>MLA DOL</th><th>MLU</th><th>MCO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rechazar</td>
+            <td><span class="hm-cell hm-delta">+2</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-delta">+3</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+          </tr>
+          <tr>
+            <td>Marca de fraude</td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-delta">+2</span></td>
+          </tr>
+          <tr>
+            <td>Marca de STO sólida</td>
+            <td><span class="hm-cell hm-delta">+1</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-delta">+1</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+          </tr>
+          <tr>
+            <td>Titularidad</td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-delta">+2</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+          </tr>
+          <tr>
+            <td>Reglas de prevención STO</td>
+            <td><span class="hm-cell hm-delta">+1</span></td>
+            <td><span class="hm-cell hm-delta">+1</span></td>
+            <td><span class="hm-cell hm-delta">+1</span></td>
+            <td><span class="hm-cell hm-delta">+1</span></td>
+            <td><span class="hm-cell hm-delta">+1</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+          </tr>
+          <tr>
+            <td>Modelo MaLe (STO)</td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-delta">+5</span></td>
+            <td><span class="hm-cell hm-delta">+5</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+          </tr>
+          <tr>
+            <td>Reglas ataques bancarios</td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-delta">+2</span></td>
+            <td><span class="hm-cell hm-delta">+2</span></td>
+            <td><span class="hm-cell hm-delta">+2</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+            <td><span class="hm-cell hm-gray">—</span></td>
+          </tr>
+          <tr class="total-row">
+            <td>TOTAL DELTA</td>
+            <td><span class="hm-cell hm-delta">+4</span></td>
+            <td><span class="hm-cell hm-delta">+8</span></td>
+            <td><span class="hm-cell hm-delta">+11</span></td>
+            <td><span class="hm-cell hm-delta">+4</span></td>
+            <td><span class="hm-cell hm-delta">+3</span></td>
+            <td><span class="hm-cell hm-delta">+2</span></td>
           </tr>
         </tbody>
       </table>
@@ -787,7 +926,7 @@
     <div class="rk-block">
       <div class="rk-block-title">⚠️ Debilidades por site</div>
 
-      <div class="rk-collapsible"><span><span class="site-chip">MLA</span> Argentina · Nota 5 · 26/50 pts · 52%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-collapsible"><span><span class="site-chip">MLA</span> Argentina · Nota 5.3 · 29/55 pts · 53%</span><span class="rk-arrow">▸</span></div>
       <div class="rk-coll-body">
         <span class="weakness-tag">❌ Sin rechazo técnico</span>
         <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
@@ -797,7 +936,7 @@
         <p class="rk-note">MLA tiene el mejor perfil (modelo MaLe, reglas bancarias, RR) pero no puede rechazar en técnica. ITO y fricción sin cobertura.</p>
       </div>
 
-      <div class="rk-collapsible"><span><span class="site-chip">MLM</span> México · Nota 5 · 26/50 pts · 52%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-collapsible"><span><span class="site-chip">MLM</span> México · Nota 4.7 · 26/55 pts · 47%</span><span class="rk-arrow">▸</span></div>
       <div class="rk-coll-body">
         <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
         <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
@@ -808,9 +947,9 @@
         <p class="rk-note">Tiene rechazo técnico y alarmas completas, pero le falta toda la capa de detección avanzada (ML, ITO, RR).</p>
       </div>
 
-      <div class="rk-collapsible"><span><span class="site-chip">MLC</span> Chile · Nota 5 · 26/50 pts · 52%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-collapsible"><span><span class="site-chip">MLC</span> Chile · Nota 5.1 · 28/55 pts · 51%</span><span class="rk-arrow">▸</span></div>
       <div class="rk-coll-body">
-        <span class="weakness-tag">❌ Sin rechazo técnico</span>
+        <span class="weakness-tag">❌ Sin rechazo técnico (en gestión)</span>
         <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
         <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
         <span class="weakness-tag">❌ Sin reglas ataques bancarios</span>
@@ -818,7 +957,7 @@
         <p class="rk-note">Único site con reglas ITO. Tiene alarmas completas y revisión manual (RR). Sin embargo, opera en modo cautelar y sin ML.</p>
       </div>
 
-      <div class="rk-collapsible"><span><span class="site-chip">MLA DOL</span> Argentina USD · Nota 4 · 19/50 pts · 38%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-collapsible"><span><span class="site-chip">MLA DOL</span> Argentina USD · Nota 4.0 · 22/55 pts · 40%</span><span class="rk-arrow">▸</span></div>
       <div class="rk-coll-body">
         <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
         <span class="weakness-tag">❌ Sin experiencia de usuario / fricción</span>
@@ -827,10 +966,10 @@
         <span class="weakness-tag">❌ Sin revisión manual (RR)</span>
         <span class="weakness-tag">⚠️ STO sólida parcial (2/5)</span>
         <span class="weakness-tag">⚠️ Alarmas parciales (3/5)</span>
-        <p class="rk-note">Tiene rechazo técnico y titularidad, pero falta toda la capa analítica avanzada. Score más bajo del bloque ARS/MXN/CLP.</p>
+        <p class="rk-note">Tiene rechazo técnico y titularidad, pero falta toda la capa analítica avanzada.</p>
       </div>
 
-      <div class="rk-collapsible"><span><span class="site-chip">MLU</span> Uruguay · Nota 4 · 20/50 pts · 40%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-collapsible"><span><span class="site-chip">MLU</span> Uruguay · Nota 3.6 · 20/55 pts · 36%</span><span class="rk-arrow">▸</span></div>
       <div class="rk-coll-body">
         <span class="weakness-tag">❌ Sin titularidad</span>
         <span class="weakness-tag">❌ Sin modelo ML (MaLe)</span>
@@ -839,10 +978,11 @@
         <span class="weakness-tag">❌ Sin reglas ataques bancarios</span>
         <span class="weakness-tag">❌ Sin revisión manual (RR)</span>
         <span class="weakness-tag">⚠️ STO sólida parcial (3/5)</span>
+        <span class="weakness-tag">⚠️ Reglas prevención STO parcial (2/5)</span>
         <p class="rk-note">Tiene rechazo técnico y alarmas completas, pero falta titularidad (señal clave de STO) y toda la capa avanzada.</p>
       </div>
 
-      <div class="rk-collapsible"><span><span class="site-chip" style="background:#ef4444;">MCO</span> Colombia · Nota 0 · 2/50 pts · 4%</span><span class="rk-arrow">▸</span></div>
+      <div class="rk-collapsible"><span><span class="site-chip" style="background:#ef4444;">MCO</span> Colombia · Nota 0.7 · 4/55 pts · 7%</span><span class="rk-arrow">▸</span></div>
       <div class="rk-coll-body">
         <span class="weakness-tag">❌ Sin rechazo</span>
         <span class="weakness-tag">❌ Sin titularidad</span>
@@ -852,13 +992,13 @@
         <span class="weakness-tag">❌ Sin revisión manual</span>
         <span class="weakness-tag">⚠️ Marca de fraude mínima (1/5)</span>
         <span class="weakness-tag">⚠️ Alarmas básicas (2/5)</span>
-        <p class="rk-note"><strong style="color:#ef4444;">Site crítico.</strong> Solo 3% de cobertura vs el ideal. Prácticamente sin herramientas de detección ni acción.</p>
+        <p class="rk-note"><strong style="color:#ef4444;">Site crítico.</strong> Solo 7% de cobertura vs el ideal. Prácticamente sin herramientas de detección ni acción.</p>
       </div>
     </div>
 
     <!-- Brecha al excelente -->
     <div class="rk-block">
-      <div class="rk-block-title">📈 Brecha al "Excelente" (50 puntos)</div>
+      <div class="rk-block-title">📈 Brecha al "Excelente" (55 puntos)</div>
       <table class="hm-table">
         <thead>
           <tr>
@@ -873,64 +1013,64 @@
         <tbody>
           <tr>
             <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#60a5fa;">MLA</td>
-            <td><span class="hm-cell hm-yellow">26</span></td>
-            <td><span class="hm-cell hm-yellow">5</span></td>
+            <td><span class="hm-cell hm-yellow">29</span></td>
+            <td><span class="hm-cell hm-yellow">5.3</span></td>
             <td style="color:#60a5fa;font-weight:600;">53%</td>
             <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:53%;background:#60a5fa;"></div></div></td>
             <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Habilitar rechazo técnico (COELSA) · Sin reglas ITO · Alarmas al 60% · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
           </tr>
           <tr>
-            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#60a5fa;">MLM</td>
-            <td><span class="hm-cell hm-yellow">26</span></td>
-            <td><span class="hm-cell hm-yellow">5</span></td>
-            <td style="color:#60a5fa;font-weight:600;">53%</td>
-            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:53%;background:#60a5fa;"></div></div></td>
-            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin modelo ML (MaLe) · Sin revisión manual (RR) · Sin reglas ITO ni ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
-          </tr>
-          <tr>
             <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#60a5fa;">MLC</td>
-            <td><span class="hm-cell hm-yellow">26</span></td>
-            <td><span class="hm-cell hm-yellow">5</span></td>
-            <td style="color:#60a5fa;font-weight:600;">52%</td>
-            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:52%;background:#60a5fa;"></div></div></td>
+            <td><span class="hm-cell hm-yellow">28</span></td>
+            <td><span class="hm-cell hm-yellow">5.1</span></td>
+            <td style="color:#60a5fa;font-weight:600;">51%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:51%;background:#60a5fa;"></div></div></td>
             <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Habilitar rechazo técnico (SMPR-59886) · Sin modelo ML (MaLe) · Sin reglas ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
           </tr>
           <tr>
-            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#94a3b8;">MLU</td>
-            <td><span class="hm-cell hm-gray">20</span></td>
-            <td><span class="hm-cell hm-gray">4</span></td>
-            <td style="color:#94a3b8;font-weight:600;">38%</td>
-            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:39%;background:#64748b;"></div></div></td>
-            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin titularidad · Sin modelo ML (MaLe) · Sin RR · Sin ITO · Sin reglas ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#60a5fa;">MLM</td>
+            <td><span class="hm-cell hm-yellow">26</span></td>
+            <td><span class="hm-cell hm-yellow">4.7</span></td>
+            <td style="color:#60a5fa;font-weight:600;">47%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:47%;background:#60a5fa;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin modelo ML (MaLe) · Sin revisión manual (RR) · Sin reglas ITO ni ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
           </tr>
           <tr>
             <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#94a3b8;">MLA DOL</td>
-            <td><span class="hm-cell hm-gray">19</span></td>
-            <td><span class="hm-cell hm-gray">4</span></td>
-            <td style="color:#94a3b8;font-weight:600;">39%</td>
-            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:38%;background:#64748b;"></div></div></td>
+            <td><span class="hm-cell hm-yellow">22</span></td>
+            <td><span class="hm-cell hm-yellow">4.0</span></td>
+            <td style="color:#94a3b8;font-weight:600;">40%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:40%;background:#64748b;"></div></div></td>
             <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin modelo ML (MaLe) · Sin RR · Sin ITO · Sin reglas ataques bancarios · Alarmas al 60% · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
           </tr>
           <tr>
+            <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#94a3b8;">MLU</td>
+            <td><span class="hm-cell hm-red">20</span></td>
+            <td><span class="hm-cell hm-red">3.6</span></td>
+            <td style="color:#94a3b8;font-weight:600;">36%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:36%;background:#64748b;"></div></div></td>
+            <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin titularidad · Sin modelo ML (MaLe) · Sin RR · Sin ITO · Sin reglas ataques bancarios · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
+          </tr>
+          <tr>
             <td style="text-align:left;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#64748b;">MCO</td>
-            <td><span class="hm-cell hm-gray">2</span></td>
-            <td><span class="hm-cell hm-gray">0</span></td>
-            <td style="color:#64748b;font-weight:600;">3%</td>
-            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:3%;background:#475569;"></div></div></td>
+            <td><span class="hm-cell hm-gray">4</span></td>
+            <td><span class="hm-cell hm-gray">0.7</span></td>
+            <td style="color:#64748b;font-weight:600;">7%</td>
+            <td><div class="brecha-bar-wrap"><div class="brecha-bar" style="width:7%;background:#475569;"></div></div></td>
             <td style="text-align:left;font-size:11px;color:#94a3b8;padding-left:12px;">Sin rechazo · Sin titularidad · Sin modelo ML · Sin RR · Sin ITO · Sin ataques bancarios · Marca de fraude mínima · Profundizar con Producto la experiencia del usuario ante rechazos y BC</td>
           </tr>
         </tbody>
       </table>
-      <p style="font-size:11px;color:var(--muted);margin-top:10px;">La columna <strong>Nota</strong> expresa la maduración del producto en escala 0–10 en función del % alcanzado vs el Excelente.</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;">La columna <strong>Nota</strong> expresa la maduración del producto en escala 0–10 en función del % alcanzado vs el Excelente (55 pts).</p>
 
       <div class="opp-grid">
         <div class="opp-card yellow">
           <div class="opp-title">🤖 Modelo MaLe (STO)</div>
-          <div class="opp-desc">Solo disponible en MLA. Extenderlo al resto de los sites es la oportunidad de mayor impacto.</div>
+          <div class="opp-desc">Solo disponible en MLA. Extender a MLM y MLC en H2 es la oportunidad de mayor impacto (+5 pts c/u).</div>
         </div>
         <div class="opp-card yellow">
           <div class="opp-title">🔒 Capacidad de rechazo</div>
-          <div class="opp-desc">MLA, MLC y MCO operan con bloqueo cautelar. Habilitar rechazo técnico en cada uno.</div>
+          <div class="opp-desc">MLA y MCO operan con bloqueo cautelar. MLC en gestión (SMPR-59886). Habilitar rechazo técnico en cada uno.</div>
         </div>
         <div class="opp-card yellow">
           <div class="opp-title">🧪 Experiencia del usuario / Fricción</div>
@@ -938,7 +1078,7 @@
         </div>
         <div class="opp-card red">
           <div class="opp-title">🇨🇴 MCO — Cobertura urgente</div>
-          <div class="opp-desc">Casi sin herramientas (2/49 pts).</div>
+          <div class="opp-desc">Casi sin herramientas (4/55 pts · 7%). Requiere plan de acción urgente.</div>
         </div>
       </div>
     </div>
